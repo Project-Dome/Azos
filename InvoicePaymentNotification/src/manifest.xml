@@ -1,4 +1,4 @@
 <manifest projecttype="ACCOUNTCUSTOMIZATION">
-  <projectname>Azos</projectname>
+  <projectname>InvoicePaymentNotification</projectname>
   <frameworkversion>1.0</frameworkversion>
 </manifest>
