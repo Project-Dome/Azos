@@ -20,8 +20,8 @@ define(
         function beforeLoad(context) {
             context.form.addButton({
                 id: 'custpage_btn_send_payment',
-                label: 'Enviar à Webhook de Pagamento',
-                functionName: 'sendToPaymentApi'
+                label: 'Enviar Webhook de Pagamento',
+                functionName: 'sendToPaymentWebhook'
             })
         }
 
@@ -30,7 +30,14 @@ define(
             
             const vendorBillData = vendorbill_service.readData(context.newRecord);
 
+            if(!checkIfVendorBillIsAbleToIntegrate(vendorBillData)) return;
+
             notification_control_service.create(vendorBillData);
+        }
+
+        function checkIfVendorBillIsAbleToIntegrate(vendorBillData) {
+            return vendorBillData.status == 'paidInFull' &&
+                !vendorBillData.isWebhookSent;
         }
 
         return {

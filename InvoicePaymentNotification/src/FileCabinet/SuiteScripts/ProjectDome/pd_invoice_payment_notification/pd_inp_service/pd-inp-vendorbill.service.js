@@ -12,19 +12,18 @@ define(
     function (
         record_util
     ) {
-        const TYPE = 'payment';
         const FIELDS = {
             id: { name: 'internalid' },
-            subsidiary: { name: 'custrecord_pd_cpmbc_subsidiary' },
-            vendor: { name: 'custrecordpd_cpmbc_vendor' },
-            item: { name: 'custrecord_pd_cpmbc_item' },
-            account: { name: 'custrecord_pd_cpmbc_account' }
+            transactionNumber: { name: 'tranid' },
+            status: { name: 'statusRef' },
+            isWebhookSent: { name: 'custbody_pd_inp_sent_webhook' },
+            amount: { name: 'custrecord_pd_cpmbc_item' }
         };
-
+ 
         function readData(record) {
             return record_util
                 .handler(record)
-                .data({ fields: FIELDS })
+                .data({ fields: FIELDS });
         }
 
         return {
