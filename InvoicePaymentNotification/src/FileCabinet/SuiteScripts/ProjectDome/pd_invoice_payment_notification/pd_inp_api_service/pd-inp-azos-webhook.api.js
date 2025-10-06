@@ -17,14 +17,14 @@ define(
 
         const HEADERS = {
             'Content-Type': 'application/json',
-            'X-API-KEY': apiKey // TODO: ver de onde virá a apikey
+            'X-API-KEY': 'apiKey' // TODO: ver de onde virá a apikey
         }
 
         function sendComissions(data) {
             const commissionsApiPath = 'v2/plataform/commissions/webhook';
-            const path = `${BASE_URL}${commissionsApiPath}`;
+            const path = `${BASE_URL}/${commissionsApiPath}`;
             log.audit('POST', path);
-            https.post({
+            const response = https.post({
                 url: `${BASE_URL}/${commissionsApiPath}`,
                 headers: HEADERS,
                 body: JSON.stringify(data),
@@ -33,10 +33,10 @@ define(
         }
 
         function sendRefund(data) {
-            const refundApiPath = '/v1/erp/webhooks/refund';
-            const path = `${BASE_URL}${refundApiPath}`;
+            const refundApiPath = 'v1/erp/webhooks/refund';
+            const path = `${BASE_URL}/${refundApiPath}`;
             log.audit('POST', path);
-            https.post({
+            const response = https.post({
                 url: path,
                 headers: HEADERS,
                 body: JSON.stringify(data),
@@ -46,12 +46,12 @@ define(
         }
 
         function handleResponse(response) {
-            response.body = JSON.parse(response.body);
-            log.audit('Response Body', response.body);
+            const responseBody = JSON.parse(response.body);
+            log.audit('Response Body', responseBody);
             if (response.code >= 200 && response.code < 300) 
-                return { success: true, data: response.body };
+                return { success: true, data: responseBody };
             
-            return { success: false, error: response.body };
+            return { success: false, error: responseBody };
         }
 
         return {

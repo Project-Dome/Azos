@@ -10,7 +10,7 @@ define([], function() {
         "PENDENTE": 1,
         "APROVADO": 2,
         "REJEITADO": 3,
-        "CANCELADO": 4
+        "ERRO": 4
     };
 
     function getCode(label) {

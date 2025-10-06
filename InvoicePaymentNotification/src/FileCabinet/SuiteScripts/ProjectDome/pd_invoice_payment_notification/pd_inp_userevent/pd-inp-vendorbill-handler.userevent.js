@@ -32,12 +32,16 @@ define(
 
             if(!checkIfVendorBillIsAbleToIntegrate(vendorBillData)) return;
 
-            notification_control_service.create(vendorBillData);
+            const notificationControlId = notification_control_service.create(vendorBillData);
+
+            const newVendorBillRec = vendorbill_service.load(context.newRecord.id);
+            vendorbill_service.setNotificationAsSent(newVendorBillRec, notificationControlId);
         }
 
         function checkIfVendorBillIsAbleToIntegrate(vendorBillData) {
             return vendorBillData.status == 'paidInFull' &&
-                !vendorBillData.isWebhookSent;
+                !vendorBillData.isWebhookSent &&
+                vendorBillData.transactionType;
         }
 
         return {
