@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_pd_inp_webhook_status">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PD | INP | Webhook Status</name>
+  <customvalues>
+    <customvalue scriptid="val_128279_7326248_sb1_871">
+      <isinactive>F</isinactive>
+      <value>PENDENTE</value>
+    </customvalue>
+    <customvalue scriptid="val_128280_7326248_sb1_790">
+      <isinactive>F</isinactive>
+      <value>APROVADO</value>
+    </customvalue>
+    <customvalue scriptid="val_128281_7326248_sb1_476">
+      <isinactive>F</isinactive>
+      <value>REJEITADO</value>
+    </customvalue>
+    <customvalue scriptid="val_128282_7326248_sb1_736">
+      <isinactive>F</isinactive>
+      <value>CANCELADO</value>
+    </customvalue>
+  </customvalues>
+</customlist>

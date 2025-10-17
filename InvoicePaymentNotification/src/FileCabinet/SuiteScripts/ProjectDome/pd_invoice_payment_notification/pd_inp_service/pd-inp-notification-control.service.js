@@ -29,7 +29,8 @@ define(
             vendorBill: { name: 'custrecord_pd_inp_vendorbill' },
             transactionType: { name: 'custrecord_pd_inp_transaction_type' },
             transactionAmount: { name: 'custrecord_pd_inp_transaction_amount' },
-            transactionNumber: { name: 'custrecord_pd_inp_transaction_number' }
+            transactionNumber: { name: 'custrecord_pd_inp_transaction_number' },
+            message: { name: 'custrecord_pd_inp_message' },
         };
 
         function load(id) {
@@ -62,8 +63,11 @@ define(
                 .save();
         }
 
-        function setStatus(status, notificationControlRecord) {
+        function setStatus(status, notificationControlRecord, message) {
             let notificationControlDataSet = {};
+
+            if (message)
+                notificationControlDataSet[FIELDS.message.name] = message;
 
             notificationControlDataSet[FIELDS.status.name] = status;
 

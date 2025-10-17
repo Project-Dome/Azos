@@ -39,7 +39,10 @@ define(
                 response = sendToComissionsPaymentWebhook(notificationControlData);
 
             if (response && response.success) {
-                notification_control_service.updateStatus(notificationControlData.id, status_map_service.getCode('ERRO'));
+                const message = `Erro na integração: \n ${JSON.stringify(response.error.message)}`;
+                notification_control_service.updateStatus(notificationControlData.id, status_map_service.getCode('ERRO'), message);
+            } else {
+                notification_control_service.updateStatus(notificationControlData.id, status_map_service.getCode('ENVIADO'));
             }
         };
 
