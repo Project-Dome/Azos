@@ -17,7 +17,7 @@ define(
 
         const HEADERS = {
             'Content-Type': 'application/json',
-            'X-API-KEY': 'apiKey' // TODO: ver de onde virá a apikey
+            'x-api-key': 'rlCCY7pTaqQ2Lc6Ez0GyaJA49WtL345Gp0H6S9d1VbJ3oa82'
         }
 
         function sendComissions(data) {
