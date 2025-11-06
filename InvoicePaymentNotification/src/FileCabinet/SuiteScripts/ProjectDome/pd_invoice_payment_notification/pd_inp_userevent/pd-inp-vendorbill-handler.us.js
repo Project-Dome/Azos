@@ -18,11 +18,17 @@ define(
         userevent_util
     ) {
         function beforeLoad(context) {
-            context.form.addButton({
-                id: 'custpage_btn_send_payment',
-                label: 'Enviar Webhook de Pagamento',
-                functionName: 'sendToPaymentWebhook'
-            })
+            context.form.clientScriptModulePath = '../pd_inp_client/pd-inp-notification-control.cs.js';
+
+            const vendorBillData = notification_control_service.readData(context.newRecord);
+
+            if (!vendorBillData.notificationControlId) {
+                context.form.addButton({
+                    id: 'custpage_btn_send_payment',
+                    label: 'Enviar a Webhook de Pagamento',
+                    functionName: 'sendToPaymentWebhook'
+                })
+            }
         }
 
         function afterSubmit(context) {

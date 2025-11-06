@@ -21,9 +21,10 @@ define(
         }
 
         function sendComissions(data) {
-            const commissionsApiPath = 'v2/plataform/commissions/webhook';
+            const commissionsApiPath = 'v1/erp/commissions';
             const path = `${BASE_URL}/${commissionsApiPath}`;
             log.audit('POST', path);
+            log.audit('body', data);
             const response = https.post({
                 url: `${BASE_URL}/${commissionsApiPath}`,
                 headers: HEADERS,
@@ -36,6 +37,7 @@ define(
             const refundApiPath = 'v1/erp/webhooks/refund';
             const path = `${BASE_URL}/${refundApiPath}`;
             log.audit('POST', path);
+            log.audit('body', data);
             const response = https.post({
                 url: path,
                 headers: HEADERS,

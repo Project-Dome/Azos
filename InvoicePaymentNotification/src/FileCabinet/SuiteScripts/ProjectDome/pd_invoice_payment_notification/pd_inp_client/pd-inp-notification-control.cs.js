@@ -26,7 +26,7 @@ define(
         function sendToPaymentWebhook() {
             var options = {
                 title: 'Confirmação',
-                message: 'Deseja reenviar o pagamento ao Webhook?'
+                message: 'Deseja enviar à webhook de pagamento?'
             };
 
             function success() { 
