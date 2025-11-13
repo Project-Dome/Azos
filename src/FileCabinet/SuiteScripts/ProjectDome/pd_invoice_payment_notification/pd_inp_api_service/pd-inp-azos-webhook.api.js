@@ -7,17 +7,19 @@
 define(
     [
         'N/log',
-        'N/https'
+        'N/https',
+        'N/runtime',
     ],
     function (
         log,
-        https
+        https,
+        runtime
     ) {
         const BASE_URL = 'https://api.gateway.azos.com.br';
 
         const HEADERS = {
             'Content-Type': 'application/json',
-            'x-api-key': 'rlCCY7pTaqQ2Lc6Ez0GyaJA49WtL345Gp0H6S9d1VbJ3oa82'
+            'x-api-key': runtime.getCurrentScript().getParameter({ name: 'custscript_pd_inp_azos_api_key' }),
         }
 
         function sendComissions(data) {
@@ -30,6 +32,7 @@ define(
                 headers: HEADERS,
                 body: JSON.stringify(data),
             });
+            
             return handleResponse(data, response);
         }
 
