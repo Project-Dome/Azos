@@ -7,12 +7,14 @@
 define([], function() {
 
     const TRANSACTION_TYPE_MAP = {
-        "REFUND": 1,
-        // TODO: VER OS OUTROS TIPOS DE TRANSAÇÃO COM A FRAN
+        'BONUS_PAYMENT_AGENCY': 2,
+        'COMISSION_PAYMENT': 3
     };
 
     function getCode(label) {
-        return TRANSACTION_TYPE_MAP[label] || label;
+        if (!TRANSACTION_TYPE_MAP.hasOwnProperty(label)) throw new Error(`Status label "${label}" not found in STATUS_MAP.`);
+        
+        return TRANSACTION_TYPE_MAP[label];
     }
 
     function getLabel(code) {

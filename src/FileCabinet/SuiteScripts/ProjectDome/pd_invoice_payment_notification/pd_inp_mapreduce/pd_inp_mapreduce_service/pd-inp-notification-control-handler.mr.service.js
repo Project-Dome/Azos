@@ -33,11 +33,10 @@ define(
 
             let response;
 
-            if (notificationControlData.transactionType == transaction_type_map_service.getCode('REFUND'))
-                response = sendToRefundPaymentWebhook(notificationControlData);
-            else
+            if (notificationControlData.transactionType == transaction_type_map_service.getCode('BONUS_PAYMENT_AGENCY') ||
+                notificationControlData.transactionType == transaction_type_map_service.getCode('COMISSION_PAYMENT'))
                 response = sendToComissionsPaymentWebhook(notificationControlData);
-            log.audit('response', response);
+
 
             const notificationControlRec = notification_control_service.load(notificationControlData.id)
 
