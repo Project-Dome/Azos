@@ -18,7 +18,7 @@ define(
         log,
         random,
 
-        status_map_service ,
+        status_map_service,
         notification_control_service,
         transaction_type_map_service,
         azos_webhook_api_service
@@ -37,12 +37,31 @@ define(
                 response = sendToRefundPaymentWebhook(notificationControlData);
             else
                 response = sendToComissionsPaymentWebhook(notificationControlData);
+            log.audit('response', response);
 
-            if (response && response.success) {
-                const message = `Erro na integração: \n ${JSON.stringify(response.error.message)}`;
-                notification_control_service.updateStatus(notificationControlData.id, status_map_service.getCode('ERRO'), message);
-            } else {
-                notification_control_service.updateStatus(notificationControlData.id, status_map_service.getCode('ENVIADO'));
+            const notificationControlRec = notification_control_service.load(notificationControlData.id)
+
+            try {
+                let message;
+                let status;
+                
+                if (response && response.success) {
+                    message = response.data.message || 'Integração realizada com sucesso.';
+                    status = status_map_service.getCode('ENVIADO');
+                } else {
+                    message = `Erro na integração: \n ${JSON.stringify(response.error.message)}`;
+                    status = status_map_service.getCode('ERRO');
+                }
+
+                notification_control_service.setStatus(
+                    status, 
+                    notificationControlRec, 
+                    message, 
+                    JSON.stringify(response.requestBody)
+                );
+
+            } catch (error) {
+                log.error('Erro inesperado na integração', error);
             }
         };
 
@@ -55,7 +74,7 @@ define(
                 reason: null
             };
 
-            azos_webhook_api_service.sendRefund(refundData)
+            return azos_webhook_api_service.sendRefund(refundData)
         }
 
         function sendToComissionsPaymentWebhook(data) {
@@ -69,7 +88,7 @@ define(
                 ]  
             };
 
-            azos_webhook_api_service.sendComissions(comissionsData)
+            return azos_webhook_api_service.sendComissions(comissionsData)
         }
 
         return {

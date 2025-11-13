@@ -17,20 +17,6 @@ define(
 
         userevent_util
     ) {
-        function beforeLoad(context) {
-            context.form.clientScriptModulePath = '../pd_inp_client/pd-inp-notification-control.cs.js';
-
-            const vendorBillData = notification_control_service.readData(context.newRecord);
-
-            if (!vendorBillData.notificationControlId) {
-                context.form.addButton({
-                    id: 'custpage_btn_send_payment',
-                    label: 'Enviar a Webhook de Pagamento',
-                    functionName: 'sendToPaymentWebhook'
-                })
-            }
-        }
-
         function afterSubmit(context) {
             if (!userevent_util.isCreation(context) && !userevent_util.isEdition(context)) return
             
@@ -41,17 +27,16 @@ define(
             const notificationControlId = notification_control_service.create(vendorBillData);
 
             const newVendorBillRec = vendorbill_service.load(context.newRecord.id);
-            vendorbill_service.setNotificationAsSent(newVendorBillRec, notificationControlId);
+            vendorbill_service.setNotificationControl(newVendorBillRec, notificationControlId);
         }
 
         function checkIfVendorBillIsAbleToIntegrate(vendorBillData) {
             return vendorBillData.status == 'paidInFull' &&
-                !vendorBillData.isWebhookSent &&
+                !vendorBillData.notificationControl &&
                 vendorBillData.transactionType;
         }
 
         return {
-            beforeLoad: beforeLoad,
             afterSubmit: afterSubmit
         }
     }

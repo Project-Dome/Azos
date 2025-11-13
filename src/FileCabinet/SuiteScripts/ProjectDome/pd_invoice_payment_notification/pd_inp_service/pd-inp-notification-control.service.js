@@ -30,6 +30,7 @@ define(
             transactionType: { name: 'custrecord_pd_inp_transaction_type' },
             transactionAmount: { name: 'custrecord_pd_inp_transaction_amount' },
             transactionNumber: { name: 'custrecord_pd_inp_transaction_number' },
+            requestBody: { name: 'custrecord_pd_inp_request_body' },
             message: { name: 'custrecord_pd_inp_message' },
         };
 
@@ -63,14 +64,17 @@ define(
                 .save();
         }
 
-        function setStatus(status, notificationControlRecord, message) {
+        function setStatus(status, notificationControlRecord, message, requestBody) {
             let notificationControlDataSet = {};
-
+            log.audit('setStatus', { status, message, requestBody });
             if (message)
                 notificationControlDataSet[FIELDS.message.name] = message;
 
-            notificationControlDataSet[FIELDS.status.name] = status;
+            if (requestBody)
+                notificationControlDataSet[FIELDS.requestBody.name] = requestBody;
 
+            notificationControlDataSet[FIELDS.status.name] = status;
+            log.audit('notificationControlDataSet', notificationControlDataSet);
             return record_util
                 .handler(notificationControlRecord)
                 .set(notificationControlDataSet)

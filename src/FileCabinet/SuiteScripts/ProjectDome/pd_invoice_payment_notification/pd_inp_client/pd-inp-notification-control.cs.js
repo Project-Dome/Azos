@@ -26,12 +26,13 @@ define(
         function sendToPaymentWebhook() {
             var options = {
                 title: 'Confirmação',
-                message: 'Deseja enviar à webhook de pagamento?'
+                message: 'Deseja reenviar à webhook de pagamento?'
             };
 
             function success() { 
                 const notificationControlRec = notification_control_service.load(current_record.get().id);
                 notification_control_service.setStatus(status_map_service.getCode('PENDENTE'), notificationControlRec);
+                window.location.reload();
             }
 
             function failure(reason) { 

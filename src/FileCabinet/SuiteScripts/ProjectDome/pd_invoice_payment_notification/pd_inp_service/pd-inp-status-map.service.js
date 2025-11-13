@@ -8,13 +8,15 @@ define([], function() {
 
     const STATUS_MAP = {
         "PENDENTE": 1,
-        "APROVADO": 2,
-        "REJEITADO": 3,
-        "ERRO": 4
+        "ENVIADO": 2,
+        "CANCELADO": 3,
+        "ERRO": 5
     };
 
     function getCode(label) {
-        return STATUS_MAP[label] || label;
+        if (!STATUS_MAP.hasOwnProperty(label)) throw new Error(`Status label "${label}" not found in STATUS_MAP.`);
+
+        return STATUS_MAP[label];
     }
 
     function getLabel(code) {

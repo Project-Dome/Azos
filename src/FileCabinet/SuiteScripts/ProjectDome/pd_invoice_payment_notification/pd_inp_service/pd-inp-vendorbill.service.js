@@ -21,7 +21,6 @@ define(
             id: { name: 'internalid' },
             transactionNumber: { name: 'transactionnumber' },
             status: { name: 'statusRef' },
-            isWebhookSent: { name: 'custbody_pd_inp_sent_webhook' },
             totalAmount: { name: 'totalaftertaxes' },
             notificationControl: { name: 'custbody_pd_inp_notification_control' },
             transactionType: { name: 'custbodypd_azos_type_transaction' }
@@ -40,10 +39,9 @@ define(
                 .data({ fields: FIELDS });
         }
 
-        function setNotificationAsSent(vendorBillRecord, notificationControlId) {
+        function setNotificationControl(vendorBillRecord, notificationControlId) {
             let vendorBillDataSet = {};
 
-            vendorBillDataSet[FIELDS.isWebhookSent.name] = true;
             vendorBillDataSet[FIELDS.notificationControl.name] = notificationControlId;
 
             return record_util
@@ -55,7 +53,7 @@ define(
         return {
             load: load,
             readData: readData,
-            setNotificationAsSent: setNotificationAsSent
+            setNotificationControl: setNotificationControl
         }
     }
 )

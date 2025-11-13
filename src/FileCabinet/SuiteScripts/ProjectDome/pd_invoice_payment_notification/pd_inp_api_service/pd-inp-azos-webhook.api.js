@@ -30,7 +30,7 @@ define(
                 headers: HEADERS,
                 body: JSON.stringify(data),
             });
-            return handleResponse(response);
+            return handleResponse(data, response);
         }
 
         function sendRefund(data) {
@@ -44,16 +44,16 @@ define(
                 body: JSON.stringify(data),
             });
 
-            return handleResponse(response);
+            return handleResponse(data, response);
         }
 
-        function handleResponse(response) {
+        function handleResponse(requestBody, response) {
             const responseBody = JSON.parse(response.body);
             log.audit('Response Body', responseBody);
             if (response.code >= 200 && response.code < 300) 
-                return { success: true, data: responseBody };
+                return { success: true, requestBody: requestBody, data: responseBody };
             
-            return { success: false, error: responseBody };
+            return { success: false, requestBody: requestBody, error: responseBody };
         }
 
         return {
