@@ -17,19 +17,15 @@ define(
     ) {
         const BASE_URL = 'https://api.gateway.azos.com.br';
 
-        const HEADERS = {
-            'Content-Type': 'application/json',
-            'x-api-key': runtime.getCurrentScript().getParameter({ name: 'custscript_pd_inp_azos_api_key' }),
-        }
-
         function sendComissions(data) {
+
             const commissionsApiPath = 'v1/erp/commissions';
             const path = `${BASE_URL}/${commissionsApiPath}`;
             log.audit('POST', path);
             log.audit('body', data);
             const response = https.post({
                 url: `${BASE_URL}/${commissionsApiPath}`,
-                headers: HEADERS,
+                headers: buildHeaders(),
                 body: JSON.stringify(data),
             });
             
@@ -43,7 +39,7 @@ define(
             log.audit('body', data);
             const response = https.post({
                 url: path,
-                headers: HEADERS,
+                headers: buildHeaders(),
                 body: JSON.stringify(data),
             });
 
@@ -57,6 +53,13 @@ define(
                 return { success: true, requestBody: requestBody, data: responseBody };
             
             return { success: false, requestBody: requestBody, error: responseBody };
+        }
+
+        function buildHeaders() {
+            return {
+                'Content-Type': 'application/json',
+                'x-api-key': runtime.getCurrentScript().getParameter({ name: 'custscript_pd_inp_azos_api_key' })
+            }
         }
 
         return {
