@@ -6,7 +6,6 @@
 define(
     [
         'N/log',
-        'N/runtime',
         'N/file',
         'N/encode',
 
@@ -18,15 +17,11 @@ define(
         '../../pd_ai_service/pd-ai-document-importation.service',
         '../../pd_ai_service/pd-ai-vendor.service',
 
-
-        // '../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-record.util',
-        // '../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-search.util',
         '../../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-xml.util',
         '../../../pd_c_netsuite_tools/pd_cnt_common/pd-cntc-common.util.js'
     ],
     function (
         log,
-        runtime,
         file,
         encode,
 

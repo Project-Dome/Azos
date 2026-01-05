@@ -3,10 +3,10 @@
         <path>~/AccountConfiguration/*</path>
     </configuration>
     <files>
-        <path>~/FileCabinet/*</path>
+        <path>~/FileCabinet/SuiteScripts/ProjectDome/pd_arquivei_integration/*</path>
     </files>
     <objects>
-        <path>~/Objects/*</path>
+        <path>~/Objects/pd_arquivei_integration/*</path>
     </objects>
     <translationimports>
         <path>~/Translations/*</path>

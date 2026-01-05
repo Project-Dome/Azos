@@ -1,5 +1,5 @@
 <manifest projecttype="ACCOUNTCUSTOMIZATION">
-  <projectname>InvoicePaymentNotification</projectname>
+  <projectname>Azos</projectname>
   <frameworkversion>1.0</frameworkversion>
   <dependencies>
     <features>
@@ -19,11 +19,22 @@
       <feature required="true">SERVERSIDESCRIPTING</feature>
       <feature required="false">OPPORTUNITIES</feature>
       <feature required="false">CUSTOMSEGMENTS</feature>
-      <feature required="false">ACCOUNTING</feature>
       <feature required="false">CREATESUITEBUNDLES</feature>
+      <feature required="true">CLASSES</feature>
+      <feature required="true">LOCATIONS</feature>
+      <feature required="true">DEPARTMENTS</feature>
+      <feature required="true">ACCOUNTING</feature>
+      <feature required="true">SUBSIDIARIES</feature>
     </features>
     <objects>
       <object>customlistpd_azos_type_transaction</object>
     </objects>
+    <applications>
+      <application id="com.netsuite.edoccertificationservice">
+        <objects>
+          <object>customrecord_ecs_edoc_category</object>
+        </objects>
+      </application>
+    </applications>
   </dependencies>
 </manifest>
