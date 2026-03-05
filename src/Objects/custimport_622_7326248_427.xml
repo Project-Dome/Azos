@@ -1,0 +1,107 @@
+<savedcsvimport scriptid="custimport_622_7326248_427">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <customrecord>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer]</customrecord>
+  <datahandling>ADDUPDATE</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <description>Mapeamento para importação CSV de preferencia de pgto de fornecedores.</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Azos - Pref. de pagamento fornecedor</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>T</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_f_default]</field>
+          <value>T</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_bank]</field>
+          <columnreference>
+            <column>BANCO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_branch_dig]</field>
+          <columnreference>
+            <column>DÍGITO VERIFICADOR DA AGÊNCIA</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_payt_info]</field>
+          <columnreference>
+            <column>TIPO DE INFORMAÇÃO DE PAGAMENTO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_vendor]</field>
+          <columnreference>
+            <column>ID Externo</column>
+            <file>CUSTOMRECORD</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_t_acct_digit]</field>
+          <columnreference>
+            <column>DÍGITO VERIFICADOR DA CONTA</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_t_acct_number]</field>
+          <columnreference>
+            <column>NÚMERO DA CONTA</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_t_branch]</field>
+          <columnreference>
+            <column>NÚMERO DA AGÊNCIA</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>NAME</field>
+          <columnreference>
+            <column>NOME DA PREFERENCIA DE PAGAMENTO</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

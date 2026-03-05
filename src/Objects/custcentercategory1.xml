@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory1">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_pd_azos]</centertab>
+  <label>NFS-e</label>
+  <links>
+    <link>
+      <linklabel>Relatório - NFS-e Conciliation</linklabel>
+      <linkobject>[scriptid=customscript_pd_ai_nfse_conciliation.customdeploy_pd_ai_nfse_conciliation]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Registro - NFS-e</linklabel>
+      <linkobject>[scriptid=customrecord_pd_ai_nfse]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Registro - Conciliação NFS-e</linklabel>
+      <linkobject>[scriptid=customrecord_pd_ai_nfse_conciliation]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

@@ -1,0 +1,58 @@
+<savedcsvimport scriptid="custimport_pd_att_plano_contas">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <datahandling>UPDATE</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <description>Atualização de subcontas e conta pai do plano de contas brasileiro.</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PD | Plano de contas - Att subcontas</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>ACCOUNT</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>ACCOUNT</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>ACCOUNT</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazilreports, scriptid=custrecord_brr_acct_i_parent_account]</field>
+          <columnreference>
+            <column>ID Conta pai</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ID</field>
+          <columnreference>
+            <column>ID Conta Netsuite</column>
+            <file>ACCOUNT</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PARENT</field>
+          <value></value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

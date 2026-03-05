@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ns_ts_fix_type_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite TS Fix Type List</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Config</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Code</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Config + Code</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>NS Product</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Not Applicable</value>
+    </customvalue>
+  </customvalues>
+</customlist>

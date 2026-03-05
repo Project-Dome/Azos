@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ns_pm_risk_impact_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite PM Risk Impact List</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Timeline</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Budget</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Resources</value>
+    </customvalue>
+    <customvalue scriptid="val_59781_t1195985_868">
+      <isinactive>F</isinactive>
+      <value>Scope</value>
+    </customvalue>
+    <customvalue scriptid="val_59945_t1195985_502">
+      <isinactive>F</isinactive>
+      <value>Scope</value>
+    </customvalue>
+  </customvalues>
+</customlist>

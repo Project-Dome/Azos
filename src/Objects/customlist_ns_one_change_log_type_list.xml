@@ -1,0 +1,12 @@
+<customlist scriptid="customlist_ns_one_change_log_type_list">
+  <description>This list is used in the Change Log in the Change Type field.</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Change Log Change Type</name>
+  <customvalues>
+    <customvalue scriptid="val_54732_t1247005_312">
+      <isinactive>F</isinactive>
+      <value>Requirement</value>
+    </customvalue>
+  </customvalues>
+</customlist>

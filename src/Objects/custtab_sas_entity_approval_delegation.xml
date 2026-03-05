@@ -1,0 +1,5 @@
+<subtab scriptid="custtab_sas_entity_approval_delegation">
+  <parent>ENTITYHUMANRESOURCES</parent>
+  <tabtype>ENTITY</tabtype>
+  <title translate="T">[scriptid=custcollection_suiteapprovals.j_ad_page_title]</title>
+</subtab>

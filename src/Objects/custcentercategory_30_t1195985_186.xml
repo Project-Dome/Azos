@@ -1,0 +1,22 @@
+<centercategory scriptid="custcentercategory_30_t1195985_186">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab10]</centertab>
+  <label>Billing</label>
+  <links>
+    <link>
+      <linkid>TRAN_BILLRUN</linkid>
+      <linklabel></linklabel>
+      <shortlist>T</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_CUSTINVCAPPRV</linkid>
+      <linklabel></linklabel>
+      <shortlist>T</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_BILLRUNSCHEDULE</linkid>
+      <linklabel></linklabel>
+      <shortlist>T</shortlist>
+    </link>
+  </links>
+</centercategory>

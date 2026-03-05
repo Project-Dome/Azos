@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_pd_sim_nao">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PD | Sim, Não</name>
+  <customvalues>
+    <customvalue scriptid="val_6328_7326248_sb1_569">
+      <isinactive>F</isinactive>
+      <value>Sim</value>
+    </customvalue>
+    <customvalue scriptid="val_6329_7326248_sb1_626">
+      <isinactive>F</isinactive>
+      <value>Não</value>
+    </customvalue>
+  </customvalues>
+</customlist>

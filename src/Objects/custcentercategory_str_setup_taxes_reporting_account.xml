@@ -1,0 +1,19 @@
+<centercategory scriptid="custcentercategory_str_setup_taxes_reporting_account">
+  <center>ACCOUNTCENTER</center>
+  <centertab>ACCOUNTCENTERCENTERSETUP</centertab>
+  <label translate="T">[scriptid=custcollection_trf_components.screen_center_link_country_tax_reporting]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_trf_components.screen_center_link_country_tax_returns]</linklabel>
+      <linkobject>[scriptid=customscript_str_tax_return_setup_su.customdeploy_str_tax_return_setup_su_v]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_trf_components.screen_center_link_country_tax_report_preferences]</linklabel>
+      <linkobject>[scriptid=customscript_str_report_preferences_su.customdeploy_str_report_preferences_su_v]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

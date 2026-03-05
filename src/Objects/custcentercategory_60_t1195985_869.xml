@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_60_t1195985_869">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>NetLedger System</label>
+  <links>
+    <link>
+      <linkid>INTL_TASKLINKS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>INTL_SECTIONS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

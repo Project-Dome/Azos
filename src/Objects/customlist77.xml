@@ -1,0 +1,32 @@
+<customlist scriptid="customlist77">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Cutover Activity</name>
+  <customvalues>
+    <customvalue scriptid="val_59967_t1195985_509">
+      <isinactive>F</isinactive>
+      <value>IMPLEMENTATION</value>
+    </customvalue>
+    <customvalue scriptid="val_59968_t1195985_140">
+      <isinactive>F</isinactive>
+      <value>WMS ADDON</value>
+    </customvalue>
+    <customvalue scriptid="val_59969_t1195985_275">
+      <isinactive>F</isinactive>
+      <value>ECOM ADDON</value>
+    </customvalue>
+    <customvalue scriptid="val_59970_t1195985_490">
+      <isinactive>F</isinactive>
+      <value>PROJECT MANAGEMENT</value>
+    </customvalue>
+    <customvalue scriptid="val_59971_t1195985_777">
+      <isinactive>F</isinactive>
+      <value>BASIC PROJECTS</value>
+    </customvalue>
+    <customvalue scriptid="val_59972_t1195985_125">
+      <isinactive>F</isinactive>
+      <value>MANUFACTURING</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,107 @@
+<savedcsvimport scriptid="custimport_pd_regra_determinacao">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <customrecord>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules]</customrecord>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <description>Importação de regras de determinação.</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PD | Regras de deter. de impostos</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_d_eff_from]</field>
+          <value>01/01/2024</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_l_itemcode]</field>
+          <columnreference>
+            <column>ID Cód de Item</column>
+            <file>CUSTOMRECORD</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_l_lob_dest]</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_l_lob_orig]</field>
+          <columnreference>
+            <column>LINHA DE NEGÓCIOS DO EMISSOR</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_l_taxregime_dest]</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_m_subsidiary]</field>
+          <value>3</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_t_city_des]</field>
+          <value>São Paulo</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_t_operation_code]</field>
+          <columnreference>
+            <column>Código de Operação</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_fte_taxrules_t_state_des]</field>
+          <value>SP</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrules.custrecord_pd_tipo_regra]</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>ID Externo</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>NAME</field>
+          <columnreference>
+            <column>Regra</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

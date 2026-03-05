@@ -1,0 +1,91 @@
+<workflow scriptid="customworkflow_pd_motivo_rejeicao">
+  <description></description>
+  <initcontexts>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ONLYWHENTESTING</keephistory>
+  <name>PD | Motivo de Rejeição</name>
+  <recordtypes>[scriptid=customrecord_pd_reason_rejection]</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate63">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Inicio</name>
+      <positionx>253</positionx>
+      <positiony>143</positiony>
+      <workflowactions triggertype="BEFORELOAD">
+        <lockrecordaction scriptid="workflowaction621">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes>COPY|EDIT</eventtypes>
+          <isinactive>F</isinactive>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </lockrecordaction>
+      </workflowactions>
+      <workflowactions triggertype="AFTERSUBMIT">
+        <gotorecordaction scriptid="workflowaction620">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <ineditmode>F</ineditmode>
+          <isinactive>T</isinactive>
+          <recordidfield>[scriptid=customrecord_pd_reason_rejection.custrecord_pd_transaction]</recordidfield>
+          <recordidjoinfield></recordidjoinfield>
+          <recordtype>PURCHASEORDER</recordtype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </gotorecordaction>
+        <sendemailaction scriptid="workflowaction622">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Olá,&lt;/p&gt;&lt;p&gt;&lt;strong&gt;{custrecord_pd_transaction.tranid}&lt;/strong&gt; foi rejeitado(a).&lt;/p&gt;&lt;p&gt;Motivo: &lt;strong&gt;{custrecord_pd_reason_rejection}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Por favor, verifique e realize os ajustes necessários.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <includerecordlink>T</includerecordlink>
+          <isinactive>F</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield>[scriptid=custbody_pd_created_by]</recipientfield>
+          <recipientjoinfield>[scriptid=customrecord_pd_reason_rejection.custrecord_pd_transaction]</recipientjoinfield>
+          <recipienttype>FIELD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>STDUSERUSER</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>{custrecord_pd_transaction.tranid} - Motivo de Rejeição</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

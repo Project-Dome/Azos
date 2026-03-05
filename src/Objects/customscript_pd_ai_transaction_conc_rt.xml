@@ -1,0 +1,22 @@
+<restlet scriptid="customscript_pd_ai_transaction_conc_rt">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PD | AI | Transaction Conciliation RT</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <scriptfile>[/SuiteScripts/ProjectDome/pd_arquivei_integration/pd_ai_restlet/pd-ai-transaction-concil.restlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pd_ai_transaction_conc_rt">
+      <allemployees>T</allemployees>
+      <allpartners>T</allpartners>
+      <allroles>T</allroles>
+      <audslctrole></audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <status>RELEASED</status>
+      <title>PD | AI | Transaction Conciliation RT</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</restlet>

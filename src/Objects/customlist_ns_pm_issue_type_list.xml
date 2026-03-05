@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ns_pm_issue_type_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite PM Issue Type List</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Business Process</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Technical</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Integration</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Partner</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Software</value>
+    </customvalue>
+  </customvalues>
+</customlist>

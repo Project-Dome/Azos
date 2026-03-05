@@ -1,0 +1,27 @@
+<centercategory scriptid="custcentercategory_46_t1195985_859">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Supply Planning</label>
+  <links>
+    <link>
+      <linkid>LIST_PLANNINGITEMCATEGORY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PLANNINGITEMGROUP</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PLANNINGRULEGROUP</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PLANNINGVIEW</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

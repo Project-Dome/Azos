@@ -1,0 +1,552 @@
+<customlist scriptid="customlist_ns_ps_process_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>NetSuite PS Business Process</name>
+  <customvalues>
+    <customvalue scriptid="val_59281_t1195985_292">
+      <isinactive>T</isinactive>
+      <value>レコードからレポ－トへ</value>
+    </customvalue>
+    <customvalue scriptid="val_59559_t1195985_391">
+      <isinactive>T</isinactive>
+      <value>凭证到报表</value>
+    </customvalue>
+    <customvalue scriptid="val_59246_t1195985_245">
+      <isinactive>T</isinactive>
+      <value>注文から入金・支払まで</value>
+    </customvalue>
+    <customvalue scriptid="val_59237_t1195985_362">
+      <isinactive>T</isinactive>
+      <value>設計から構築</value>
+    </customvalue>
+    <customvalue scriptid="val_59262_t1195985_983">
+      <isinactive>T</isinactive>
+      <value>調達から支払まで</value>
+    </customvalue>
+    <customvalue scriptid="val_59523_t1195985_929">
+      <isinactive>T</isinactive>
+      <value>订单到收款_客户退货</value>
+    </customvalue>
+    <customvalue scriptid="val_59515_t1195985_435">
+      <isinactive>T</isinactive>
+      <value>设计到创建</value>
+    </customvalue>
+    <customvalue scriptid="val_59540_t1195985_408">
+      <isinactive>T</isinactive>
+      <value>采购到付款_退货到供应商</value>
+    </customvalue>
+    <customvalue scriptid="val_51818_t1195985_387">
+      <isinactive>T</isinactive>
+      <value>Add On - FAM</value>
+    </customvalue>
+    <customvalue scriptid="val_54224_t1195985_647">
+      <isinactive>T</isinactive>
+      <value>Add On - Marketplace</value>
+    </customvalue>
+    <customvalue scriptid="val_51817_t1195985_592">
+      <isinactive>T</isinactive>
+      <value>Add On - OW</value>
+    </customvalue>
+    <customvalue scriptid="val_53248_t1195985_195">
+      <isinactive>T</isinactive>
+      <value>Add ons</value>
+    </customvalue>
+    <customvalue scriptid="val_53138_t1195985_934">
+      <isinactive>T</isinactive>
+      <value>Additional Cases</value>
+    </customvalue>
+    <customvalue scriptid="val_54033_t1195985_807">
+      <isinactive>T</isinactive>
+      <value>Add-On - ACH_EFT</value>
+    </customvalue>
+    <customvalue scriptid="val_62713_t1195985_498">
+      <isinactive>F</isinactive>
+      <value>Adjustments</value>
+    </customvalue>
+    <customvalue scriptid="val_62650_t1195985_451">
+      <isinactive>F</isinactive>
+      <value>Administrative Setup</value>
+    </customvalue>
+    <customvalue scriptid="val_53137_t1195985_827">
+      <isinactive>T</isinactive>
+      <value>Adv. Inventory Mgmt (Add-On)</value>
+    </customvalue>
+    <customvalue scriptid="val_62709_t1195985_168">
+      <isinactive>F</isinactive>
+      <value>Appendix - Advanced Electronic Bank Payments</value>
+    </customvalue>
+    <customvalue scriptid="val_62700_t1195985_444">
+      <isinactive>F</isinactive>
+      <value>Base Budget</value>
+    </customvalue>
+    <customvalue scriptid="val_62705_t1195985_209">
+      <isinactive>F</isinactive>
+      <value>Budget Update</value>
+    </customvalue>
+    <customvalue scriptid="val_62703_t1195985_172">
+      <isinactive>F</isinactive>
+      <value>Budgeting and Analysis</value>
+    </customvalue>
+    <customvalue scriptid="value_9_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Call to Resolution</value>
+    </customvalue>
+    <customvalue scriptid="val_62667_t1195985_880">
+      <isinactive>F</isinactive>
+      <value>Call to Resolution</value>
+    </customvalue>
+    <customvalue scriptid="value_12_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Configuration / Customization</value>
+    </customvalue>
+    <customvalue scriptid="val_62671_t1195985_171">
+      <isinactive>F</isinactive>
+      <value>Contract Manufacturing</value>
+    </customvalue>
+    <customvalue scriptid="val_62691_t1195985_539">
+      <isinactive>F</isinactive>
+      <value>CPQ Configurator</value>
+    </customvalue>
+    <customvalue scriptid="val_62695_t1195985_169">
+      <isinactive>F</isinactive>
+      <value>CPQ Ecommerce Integration</value>
+    </customvalue>
+    <customvalue scriptid="val_62692_t1195985_772">
+      <isinactive>F</isinactive>
+      <value>CPQ Guided Selling</value>
+    </customvalue>
+    <customvalue scriptid="val_62693_t1195985_257">
+      <isinactive>F</isinactive>
+      <value>CPQ Manufacturing</value>
+    </customvalue>
+    <customvalue scriptid="val_62694_t1195985_643">
+      <isinactive>F</isinactive>
+      <value>CPQ Proposal Generator</value>
+    </customvalue>
+    <customvalue scriptid="val_62696_t1195985_322">
+      <isinactive>F</isinactive>
+      <value>CPQ SuiteCommerce Integration</value>
+    </customvalue>
+    <customvalue scriptid="val_62714_t1195985_519">
+      <isinactive>F</isinactive>
+      <value>CRM</value>
+    </customvalue>
+    <customvalue scriptid="val_59864_t1195985_260">
+      <isinactive>T</isinactive>
+      <value>Data Migration - Complete</value>
+    </customvalue>
+    <customvalue scriptid="val_59807_t1195985_592">
+      <isinactive>T</isinactive>
+      <value>Data Migration - Sample</value>
+    </customvalue>
+    <customvalue scriptid="val_58980_t1195985_569">
+      <isinactive>T</isinactive>
+      <value>De la Compra al Pago</value>
+    </customvalue>
+    <customvalue scriptid="val_58978_t1195985_337">
+      <isinactive>T</isinactive>
+      <value>De la Config. al Inventario</value>
+    </customvalue>
+    <customvalue scriptid="val_58979_t1195985_310">
+      <isinactive>T</isinactive>
+      <value>De la Orden a la Cobranza</value>
+    </customvalue>
+    <customvalue scriptid="val_58981_t1195985_745">
+      <isinactive>T</isinactive>
+      <value>Del Registro al Reporte</value>
+    </customvalue>
+    <customvalue scriptid="val_62669_t1195985_431">
+      <isinactive>F</isinactive>
+      <value>Demand Planning</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Design to Build</value>
+    </customvalue>
+    <customvalue scriptid="val_62653_t1195985_178">
+      <isinactive>F</isinactive>
+      <value>Design to Build</value>
+    </customvalue>
+    <customvalue scriptid="val_62706_t1195985_666">
+      <isinactive>F</isinactive>
+      <value>Drill Options</value>
+    </customvalue>
+    <customvalue scriptid="val_62672_t1195985_376">
+      <isinactive>F</isinactive>
+      <value>eComm: Item Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62674_t1195985_974">
+      <isinactive>F</isinactive>
+      <value>eComm: Promotions</value>
+    </customvalue>
+    <customvalue scriptid="val_62673_t1195985_776">
+      <isinactive>F</isinactive>
+      <value>eComm: Web to Order</value>
+    </customvalue>
+    <customvalue scriptid="val_62658_t1195985_121">
+      <isinactive>F</isinactive>
+      <value>eCommerce and Marketplace Integration</value>
+    </customvalue>
+    <customvalue scriptid="val_53236_t1195985_164">
+      <isinactive>T</isinactive>
+      <value>Electronic Payments</value>
+    </customvalue>
+    <customvalue scriptid="val_62715_t1195985_476">
+      <isinactive>F</isinactive>
+      <value>Employee Hiring Process</value>
+    </customvalue>
+    <customvalue scriptid="val_62716_t1195985_210">
+      <isinactive>F</isinactive>
+      <value>Employee Record Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62651_t1195985_620">
+      <isinactive>F</isinactive>
+      <value>Financial Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62717_t1195985_984">
+      <isinactive>F</isinactive>
+      <value>Financial Management (French)</value>
+    </customvalue>
+    <customvalue scriptid="val_53136_t1195985_179">
+      <isinactive>T</isinactive>
+      <value>Fixed Asset Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62668_t1195985_885">
+      <isinactive>F</isinactive>
+      <value>Fixed Asset Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62718_t1195985_840">
+      <isinactive>F</isinactive>
+      <value>French Process Area Translated</value>
+    </customvalue>
+    <customvalue scriptid="val_62655_t1195985_582">
+      <isinactive>F</isinactive>
+      <value>French Process Area Translation</value>
+    </customvalue>
+    <customvalue scriptid="val_62719_t1195985_441">
+      <isinactive>F</isinactive>
+      <value>Glossary</value>
+    </customvalue>
+    <customvalue scriptid="val_62720_t1195985_292">
+      <isinactive>F</isinactive>
+      <value>Goal Creation</value>
+    </customvalue>
+    <customvalue scriptid="val_62721_t1195985_598">
+      <isinactive>F</isinactive>
+      <value>Goal Management Process</value>
+    </customvalue>
+    <customvalue scriptid="val_54864_t1195985_515">
+      <isinactive>T</isinactive>
+      <value>HCM</value>
+    </customvalue>
+    <customvalue scriptid="value_10_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Hire to Pay (Payroll)</value>
+    </customvalue>
+    <customvalue scriptid="val_62704_t1195985_599">
+      <isinactive>F</isinactive>
+      <value>Incremental Update – Revenue and Gross Margin</value>
+    </customvalue>
+    <customvalue scriptid="val_54408_t1195985_269">
+      <isinactive>T</isinactive>
+      <value>Intercompany Transactions</value>
+    </customvalue>
+    <customvalue scriptid="val_62711_t1195985_494">
+      <isinactive>F</isinactive>
+      <value>Intercompany Transfer - Brazil</value>
+    </customvalue>
+    <customvalue scriptid="val_53709_t1195985_712">
+      <isinactive>T</isinactive>
+      <value>Lead to Cash_Return to Credit</value>
+    </customvalue>
+    <customvalue scriptid="val_62654_t1195985_431">
+      <isinactive>F</isinactive>
+      <value>Lead to Quote</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Lead to Quote</value>
+    </customvalue>
+    <customvalue scriptid="val_52990_t1195985_212">
+      <isinactive>T</isinactive>
+      <value>Manufacturing</value>
+    </customvalue>
+    <customvalue scriptid="val_62661_t1195985_694">
+      <isinactive>F</isinactive>
+      <value>Marketing to ROI</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Marketing to ROI</value>
+    </customvalue>
+    <customvalue scriptid="val_62649_t1195985_533">
+      <isinactive>F</isinactive>
+      <value>Master Data Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62698_t1195985_699">
+      <isinactive>F</isinactive>
+      <value>NSPB Sync - SetUp</value>
+    </customvalue>
+    <customvalue scriptid="val_62699_t1195985_749">
+      <isinactive>F</isinactive>
+      <value>NSPB Sync Portlet View and Tasks</value>
+    </customvalue>
+    <customvalue scriptid="val_62710_t1195985_303">
+      <isinactive>F</isinactive>
+      <value>Optional Add-Ons - Social Impact</value>
+    </customvalue>
+    <customvalue scriptid="val_52950_t1195985_333">
+      <isinactive>T</isinactive>
+      <value>Order to Cash</value>
+    </customvalue>
+    <customvalue scriptid="val_62656_t1195985_276">
+      <isinactive>F</isinactive>
+      <value>Order to Cash</value>
+    </customvalue>
+    <customvalue scriptid="value_7_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Order to Cash_Return to Credit</value>
+    </customvalue>
+    <customvalue scriptid="val_51715_t1195985_503">
+      <isinactive>T</isinactive>
+      <value>Organisation Structure</value>
+    </customvalue>
+    <customvalue scriptid="value_13_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Other</value>
+    </customvalue>
+    <customvalue scriptid="val_62722_t1195985_339">
+      <isinactive>F</isinactive>
+      <value>Performance Management Overview</value>
+    </customvalue>
+    <customvalue scriptid="val_62662_t1195985_441">
+      <isinactive>F</isinactive>
+      <value>Plan to Produce</value>
+    </customvalue>
+    <customvalue scriptid="val_62723_t1195985_651">
+      <isinactive>F</isinactive>
+      <value>Processing Payroll</value>
+    </customvalue>
+    <customvalue scriptid="val_58810_t1195985_908">
+      <isinactive>T</isinactive>
+      <value>Processus Achats_Retours</value>
+    </customvalue>
+    <customvalue scriptid="val_58813_t1195985_752">
+      <isinactive>T</isinactive>
+      <value>Processus Comptables</value>
+    </customvalue>
+    <customvalue scriptid="val_58811_t1195985_250">
+      <isinactive>T</isinactive>
+      <value>Processus Conception Article</value>
+    </customvalue>
+    <customvalue scriptid="val_58812_t1195985_812">
+      <isinactive>T</isinactive>
+      <value>Processus Ventes_Retours</value>
+    </customvalue>
+    <customvalue scriptid="val_52951_t1195985_381">
+      <isinactive>T</isinactive>
+      <value>Procure to Pay</value>
+    </customvalue>
+    <customvalue scriptid="val_62659_t1195985_740">
+      <isinactive>F</isinactive>
+      <value>Procure to Pay</value>
+    </customvalue>
+    <customvalue scriptid="value_6_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Procure to Pay_Return to Debit</value>
+    </customvalue>
+    <customvalue scriptid="val_62697_t1195985_788">
+      <isinactive>F</isinactive>
+      <value>Program Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62665_t1195985_339">
+      <isinactive>F</isinactive>
+      <value>Project Costing</value>
+    </customvalue>
+    <customvalue scriptid="val_62663_t1195985_907">
+      <isinactive>F</isinactive>
+      <value>Project to Cash</value>
+    </customvalue>
+    <customvalue scriptid="value_8_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Project to Cash</value>
+    </customvalue>
+    <customvalue scriptid="val_53237_t1195985_182">
+      <isinactive>T</isinactive>
+      <value>Project to Cash (Add-On)</value>
+    </customvalue>
+    <customvalue scriptid="val_51984_t1195985_114">
+      <isinactive>T</isinactive>
+      <value>Projects</value>
+    </customvalue>
+    <customvalue scriptid="val_62724_t1195985_904">
+      <isinactive>F</isinactive>
+      <value>Promotions</value>
+    </customvalue>
+    <customvalue scriptid="val_62685_t1195985_962">
+      <isinactive>F</isinactive>
+      <value>Quality - Assign In-Process Inspection</value>
+    </customvalue>
+    <customvalue scriptid="val_62684_t1195985_395">
+      <isinactive>F</isinactive>
+      <value>Quality - Assign Inspections</value>
+    </customvalue>
+    <customvalue scriptid="val_62683_t1195985_636">
+      <isinactive>F</isinactive>
+      <value>Quality - Configuration</value>
+    </customvalue>
+    <customvalue scriptid="val_62688_t1195985_833">
+      <isinactive>F</isinactive>
+      <value>Quality - High Volume Sampling</value>
+    </customvalue>
+    <customvalue scriptid="val_62686_t1195985_694">
+      <isinactive>F</isinactive>
+      <value>Quality - Performing Incoming Inspections</value>
+    </customvalue>
+    <customvalue scriptid="val_62687_t1195985_468">
+      <isinactive>F</isinactive>
+      <value>Quality - Performing In-Process Inspections</value>
+    </customvalue>
+    <customvalue scriptid="val_62690_t1195985_320">
+      <isinactive>F</isinactive>
+      <value>Quality - Reporting</value>
+    </customvalue>
+    <customvalue scriptid="val_62689_t1195985_679">
+      <isinactive>F</isinactive>
+      <value>Quality - Workflows</value>
+    </customvalue>
+    <customvalue scriptid="value_1_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Record to Report</value>
+    </customvalue>
+    <customvalue scriptid="val_62652_t1195985_917">
+      <isinactive>F</isinactive>
+      <value>Record to Report</value>
+    </customvalue>
+    <customvalue scriptid="val_62725_t1195985_568">
+      <isinactive>F</isinactive>
+      <value>Reporting</value>
+    </customvalue>
+    <customvalue scriptid="val_62701_t1195985_692">
+      <isinactive>F</isinactive>
+      <value>Reporting &amp; Analytics</value>
+    </customvalue>
+    <customvalue scriptid="val_62664_t1195985_564">
+      <isinactive>F</isinactive>
+      <value>Resource to Project</value>
+    </customvalue>
+    <customvalue scriptid="val_53710_t1195985_547">
+      <isinactive>T</isinactive>
+      <value>Resource to Project</value>
+    </customvalue>
+    <customvalue scriptid="val_62657_t1195985_815">
+      <isinactive>F</isinactive>
+      <value>Return to Credit</value>
+    </customvalue>
+    <customvalue scriptid="val_62660_t1195985_526">
+      <isinactive>F</isinactive>
+      <value>Return to Debit</value>
+    </customvalue>
+    <customvalue scriptid="val_62666_t1195985_431">
+      <isinactive>F</isinactive>
+      <value>Revenue Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62726_t1195985_413">
+      <isinactive>F</isinactive>
+      <value>Reversals</value>
+    </customvalue>
+    <customvalue scriptid="val_62727_t1195985_290">
+      <isinactive>F</isinactive>
+      <value>Review Process</value>
+    </customvalue>
+    <customvalue scriptid="val_54407_t1195985_165">
+      <isinactive>T</isinactive>
+      <value>SCIS</value>
+    </customvalue>
+    <customvalue scriptid="val_62728_t1195985_490">
+      <isinactive>F</isinactive>
+      <value>Separation</value>
+    </customvalue>
+    <customvalue scriptid="val_53682_t1195985_117">
+      <isinactive>T</isinactive>
+      <value>Serialised/ Lot No  and Matrix</value>
+    </customvalue>
+    <customvalue scriptid="val_62729_t1195985_961">
+      <isinactive>F</isinactive>
+      <value>Ship Central</value>
+    </customvalue>
+    <customvalue scriptid="val_62707_t1195985_518">
+      <isinactive>F</isinactive>
+      <value>Smart View</value>
+    </customvalue>
+    <customvalue scriptid="val_62708_t1195985_793">
+      <isinactive>F</isinactive>
+      <value>Solution Setup and Planning</value>
+    </customvalue>
+    <customvalue scriptid="val_62730_t1195985_819">
+      <isinactive>F</isinactive>
+      <value>SuiteCommerce MyAccount</value>
+    </customvalue>
+    <customvalue scriptid="val_62670_t1195985_676">
+      <isinactive>F</isinactive>
+      <value>Supply Planning</value>
+    </customvalue>
+    <customvalue scriptid="value_11_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>System Administration / Setup</value>
+    </customvalue>
+    <customvalue scriptid="val_62702_t1195985_182">
+      <isinactive>F</isinactive>
+      <value>System Maintenance</value>
+    </customvalue>
+    <customvalue scriptid="val_62731_t1195985_583">
+      <isinactive>F</isinactive>
+      <value>Time Off Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62712_t1195985_285">
+      <isinactive>F</isinactive>
+      <value>Vendor Returns</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1247005_146">
+      <isinactive>T</isinactive>
+      <value>Web to Order</value>
+    </customvalue>
+    <customvalue scriptid="val_62675_t1195985_332">
+      <isinactive>F</isinactive>
+      <value>WMS - Configuration</value>
+    </customvalue>
+    <customvalue scriptid="val_62680_t1195985_546">
+      <isinactive>F</isinactive>
+      <value>WMS - Inventory (Bin Replenishment)</value>
+    </customvalue>
+    <customvalue scriptid="val_62682_t1195985_224">
+      <isinactive>F</isinactive>
+      <value>WMS - Inventory (Cycle Count)</value>
+    </customvalue>
+    <customvalue scriptid="val_62681_t1195985_708">
+      <isinactive>F</isinactive>
+      <value>WMS - Inventory Management</value>
+    </customvalue>
+    <customvalue scriptid="val_62677_t1195985_236">
+      <isinactive>F</isinactive>
+      <value>WMS - Order Release</value>
+    </customvalue>
+    <customvalue scriptid="val_62679_t1195985_959">
+      <isinactive>F</isinactive>
+      <value>WMS - Packing/Shipping</value>
+    </customvalue>
+    <customvalue scriptid="val_62678_t1195985_973">
+      <isinactive>F</isinactive>
+      <value>WMS - Picking</value>
+    </customvalue>
+    <customvalue scriptid="val_62676_t1195985_571">
+      <isinactive>F</isinactive>
+      <value>WMS - Receiving &amp; Putaway</value>
+    </customvalue>
+    <customvalue scriptid="val_53683_t1195985_581">
+      <isinactive>T</isinactive>
+      <value>Work Orders and Assemblies</value>
+    </customvalue>
+  </customvalues>
+</customlist>

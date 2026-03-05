@@ -1,0 +1,116 @@
+<customlist scriptid="customlist75">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>NS UAT Sub Category</name>
+  <customvalues>
+    <customvalue scriptid="val_55061_t1195985_580">
+      <isinactive>F</isinactive>
+      <value>Advanced Permissions</value>
+    </customvalue>
+    <customvalue scriptid="val_55048_t1195985_924">
+      <isinactive>F</isinactive>
+      <value>Advanced Termination</value>
+    </customvalue>
+    <customvalue scriptid="val_55059_t1195985_908">
+      <isinactive>F</isinactive>
+      <value>Auto Approvals</value>
+    </customvalue>
+    <customvalue scriptid="val_55051_t1195985_423">
+      <isinactive>F</isinactive>
+      <value>Benefits Tracking</value>
+    </customvalue>
+    <customvalue scriptid="val_55045_t1195985_523">
+      <isinactive>F</isinactive>
+      <value>Comp Tracking</value>
+    </customvalue>
+    <customvalue scriptid="val_55060_t1195985_901">
+      <isinactive>F</isinactive>
+      <value>Custom Roles</value>
+    </customvalue>
+    <customvalue scriptid="val_55069_t1195985_199">
+      <isinactive>F</isinactive>
+      <value>Effective Dating</value>
+    </customvalue>
+    <customvalue scriptid="val_55066_t1195985_277">
+      <isinactive>F</isinactive>
+      <value>Employee Center Publishing</value>
+    </customvalue>
+    <customvalue scriptid="val_55049_t1195985_117">
+      <isinactive>F</isinactive>
+      <value>Employee Dir &amp; Org Browser</value>
+    </customvalue>
+    <customvalue scriptid="val_55063_t1195985_854">
+      <isinactive>F</isinactive>
+      <value>Employee Reports</value>
+    </customvalue>
+    <customvalue scriptid="val_55046_t1195985_575">
+      <isinactive>F</isinactive>
+      <value>Gvt-Issued ID</value>
+    </customvalue>
+    <customvalue scriptid="val_55053_t1195985_886">
+      <isinactive>F</isinactive>
+      <value>Health &amp; Safety</value>
+    </customvalue>
+    <customvalue scriptid="val_55044_t1195985_405">
+      <isinactive>F</isinactive>
+      <value>Job Levels and Families</value>
+    </customvalue>
+    <customvalue scriptid="val_55043_t1195985_442">
+      <isinactive>F</isinactive>
+      <value>Job Management</value>
+    </customvalue>
+    <customvalue scriptid="val_55052_t1195985_759">
+      <isinactive>F</isinactive>
+      <value>Job Requisition</value>
+    </customvalue>
+    <customvalue scriptid="val_55050_t1195985_399">
+      <isinactive>F</isinactive>
+      <value>Kudos</value>
+    </customvalue>
+    <customvalue scriptid="val_55067_t1195985_719">
+      <isinactive>F</isinactive>
+      <value>Onboarding Checklist</value>
+    </customvalue>
+    <customvalue scriptid="val_55064_t1195985_596">
+      <isinactive>F</isinactive>
+      <value>Recruiting Reports</value>
+    </customvalue>
+    <customvalue scriptid="val_55065_t1195985_939">
+      <isinactive>F</isinactive>
+      <value>Standard Dashboard</value>
+    </customvalue>
+    <customvalue scriptid="val_55057_t1195985_444">
+      <isinactive>F</isinactive>
+      <value>Submit &amp; Approve TO Request</value>
+    </customvalue>
+    <customvalue scriptid="val_55047_t1195985_811">
+      <isinactive>F</isinactive>
+      <value>Termination Tracking</value>
+    </customvalue>
+    <customvalue scriptid="val_55058_t1195985_225">
+      <isinactive>F</isinactive>
+      <value>Time Off Calendar</value>
+    </customvalue>
+    <customvalue scriptid="val_55056_t1195985_464">
+      <isinactive>F</isinactive>
+      <value>Time-Off Changes</value>
+    </customvalue>
+    <customvalue scriptid="val_55055_t1195985_525">
+      <isinactive>F</isinactive>
+      <value>Time-Off Plan</value>
+    </customvalue>
+    <customvalue scriptid="val_55070_t1195985_107">
+      <isinactive>F</isinactive>
+      <value>Time-Off Type</value>
+    </customvalue>
+    <customvalue scriptid="val_55054_t1195985_221">
+      <isinactive>F</isinactive>
+      <value>Work Calendar</value>
+    </customvalue>
+    <customvalue scriptid="val_55062_t1195985_840">
+      <isinactive>F</isinactive>
+      <value>Workforce Analytics</value>
+    </customvalue>
+  </customvalues>
+</customlist>

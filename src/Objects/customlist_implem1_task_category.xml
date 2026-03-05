@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_implem1_task_category">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NS DMT Task Category</name>
+  <customvalues>
+    <customvalue scriptid="val_26072_6718498_601">
+      <isinactive>F</isinactive>
+      <value>Data Records</value>
+    </customvalue>
+    <customvalue scriptid="val_26073_6718498_216">
+      <isinactive>F</isinactive>
+      <value>Historical Trial Balances</value>
+    </customvalue>
+    <customvalue scriptid="val_26074_6718498_173">
+      <isinactive>F</isinactive>
+      <value>Cutover Tasks</value>
+    </customvalue>
+  </customvalues>
+</customlist>

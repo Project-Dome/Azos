@@ -1,0 +1,60 @@
+<customlist scriptid="customlist_ns_pm_one_stage_listing">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite Stage Listing</name>
+  <customvalues>
+    <customvalue scriptid="val_51387_t1195985_903">
+      <isinactive>F</isinactive>
+      <value>Engage</value>
+    </customvalue>
+    <customvalue scriptid="val_51391_t1195985_886">
+      <isinactive>F</isinactive>
+      <value>Enable</value>
+    </customvalue>
+    <customvalue scriptid="val_51388_t1195985_575">
+      <isinactive>F</isinactive>
+      <value>Drive</value>
+    </customvalue>
+    <customvalue scriptid="val_51389_t1195985_984">
+      <isinactive>F</isinactive>
+      <value>Convert</value>
+    </customvalue>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Initiate</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Analyze</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Design</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Validate</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Configure</value>
+    </customvalue>
+    <customvalue scriptid="value_6_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Deploy</value>
+    </customvalue>
+    <customvalue scriptid="value_7_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Optimize</value>
+    </customvalue>
+    <customvalue scriptid="val_51390_t1195985_701">
+      <isinactive>T</isinactive>
+      <value>Check-in</value>
+    </customvalue>
+    <customvalue scriptid="value_8_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Next Phase (SuiteSuccess)</value>
+    </customvalue>
+  </customvalues>
+</customlist>

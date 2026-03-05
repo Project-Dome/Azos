@@ -1,0 +1,67 @@
+<savedcsvimport scriptid="custimport_pd_config_impostos">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <customrecord>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrate]</customrecord>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <description>Importação de configuração de impostos</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PD | Configuração de imposto</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrate.custrecord_fte_taxrate_d_effective_from]</field>
+          <value>01/01/2024</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrate.custrecord_fte_taxrate_f_allow_override]</field>
+          <value>T</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrate.custrecord_fte_taxrate_l_taxcode]</field>
+          <value>315</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrate.custrecord_fte_taxrate_l_taxrule]</field>
+          <columnreference>
+            <column>ID Externo</column>
+            <file>CUSTOMRECORD</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=customrecord_fte_taxrate.custrecord_fte_taxrate_p_rate]</field>
+          <columnreference>
+            <column>ISS Alíquota</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

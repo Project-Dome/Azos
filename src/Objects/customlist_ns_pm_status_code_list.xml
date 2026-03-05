@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ns_pm_status_code_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>NetSuite PM Status Code List</name>
+  <customvalues>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Blue</value>
+    </customvalue>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Green</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Red</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Yellow</value>
+    </customvalue>
+  </customvalues>
+</customlist>

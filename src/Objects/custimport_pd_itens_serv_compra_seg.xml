@@ -1,0 +1,74 @@
+<savedcsvimport scriptid="custimport_pd_itens_serv_compra_seg">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <description>Importação de itens de serviços para compras - Seguradora</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PD | Itens - Serviços de compras</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>SERVICEPURCHASEITEM</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>F</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>SERVICEPURCHASEITEM</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>SERVICEPURCHASEITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=custitem_fte_item_l_itemcode]</field>
+          <columnreference>
+            <column>ID</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DISPLAYNAME</field>
+          <columnreference>
+            <column>NOME/CÓDIGO DE EXIBIÇÃO</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>INCLUDECHILDREN</field>
+          <value>F</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEMID</field>
+          <columnreference>
+            <column>NOME/NÚMERO DO ITEM</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>3</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>UNITSTYPE</field>
+          <value>1</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

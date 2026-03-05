@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ns_ibe_engagement_types">
+  <description>Types of engagements.</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Engagement Types</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1247005_146">
+      <isinactive>F</isinactive>
+      <value>QuickStart</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1247005_146">
+      <isinactive>F</isinactive>
+      <value>SCADefault</value>
+    </customvalue>
+  </customvalues>
+</customlist>

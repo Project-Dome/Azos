@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_ns_pm_risk_resolution_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite PM Risk Resolutions</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Identified</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Mitigation in Process</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Not Addressing</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Resolved</value>
+    </customvalue>
+  </customvalues>
+</customlist>

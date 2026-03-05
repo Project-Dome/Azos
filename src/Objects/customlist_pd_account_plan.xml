@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_pd_account_plan">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>PD | Plano de contas</name>
+  <customvalues>
+    <customvalue scriptid="val_6334_7326248_sb1_586">
+      <isinactive>F</isinactive>
+      <value>Normal</value>
+    </customvalue>
+    <customvalue scriptid="val_6335_7326248_sb1_834">
+      <isinactive>F</isinactive>
+      <value>SUSEP</value>
+    </customvalue>
+  </customvalues>
+</customlist>

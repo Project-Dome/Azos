@@ -1,0 +1,22 @@
+<centercategory scriptid="custcentercategory_40_t1195985_802">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab10]</centertab>
+  <label>Quota/Forecast</label>
+  <links>
+    <link>
+      <linkid>TRAN_QUOTA</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_FORECAST</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>TRAN_MGRFORECAST</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

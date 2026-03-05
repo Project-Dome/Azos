@@ -1,0 +1,52 @@
+<customlist scriptid="customlistpd_azos_type_transaction">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>Tipo de Transação</name>
+  <customvalues>
+    <customvalue scriptid="val_141425_7326248_728">
+      <isinactive>F</isinactive>
+      <value>Cartão de crédito</value>
+    </customvalue>
+    <customvalue scriptid="val_131079_7326248_794">
+      <isinactive>F</isinactive>
+      <value>Fornecedor comum/corporativo</value>
+    </customvalue>
+    <customvalue scriptid="val_128184_7326248_sb1_925">
+      <isinactive>T</isinactive>
+      <value>Indenização do sinistro</value>
+    </customvalue>
+    <customvalue scriptid="val_128183_7326248_sb1_833">
+      <isinactive>F</isinactive>
+      <value>Pagamento bônus (Agenciamento)</value>
+    </customvalue>
+    <customvalue scriptid="val_128182_7326248_sb1_540">
+      <isinactive>F</isinactive>
+      <value>Pagamento comissão </value>
+    </customvalue>
+    <customvalue scriptid="val_178450_7326248_223">
+      <isinactive>F</isinactive>
+      <value>Pagamento de Benefícios</value>
+    </customvalue>
+    <customvalue scriptid="val_131077_7326248_293">
+      <isinactive>F</isinactive>
+      <value>Pagamento Folha - CLTs</value>
+    </customvalue>
+    <customvalue scriptid="val_131078_7326248_692">
+      <isinactive>F</isinactive>
+      <value>Pagamento Folha - PJ&apos;s</value>
+    </customvalue>
+    <customvalue scriptid="val_128185_7326248_sb1_391">
+      <isinactive>T</isinactive>
+      <value>Pagamento Resseguro (Sem Sinistro)</value>
+    </customvalue>
+    <customvalue scriptid="val_128181_7326248_sb1_917">
+      <isinactive>F</isinactive>
+      <value>Recusa da proposta - Reembolso</value>
+    </customvalue>
+    <customvalue scriptid="val_131080_7326248_947">
+      <isinactive>F</isinactive>
+      <value>Reembolso - Onfly</value>
+    </customvalue>
+  </customvalues>
+</customlist>

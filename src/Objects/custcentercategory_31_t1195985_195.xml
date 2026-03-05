@@ -1,0 +1,27 @@
+<centercategory scriptid="custcentercategory_31_t1195985_195">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab10]</centertab>
+  <label>Subscriptions</label>
+  <links>
+    <link>
+      <linkid>EDIT_SUBSCRIPTION</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SUBSCRIPTIONCHANGEORDER</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SUBSCRIPTIONRENEWALHISTORY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>EDIT_USAGE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

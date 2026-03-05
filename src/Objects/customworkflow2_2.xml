@@ -1,0 +1,813 @@
+<workflow scriptid="customworkflow2_2">
+  <description></description>
+  <initcontexts>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>T</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype></inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>PD | Aprovação de Fatura</name>
+  <recordtypes>VENDORBILL</recordtypes>
+  <releasestatus>RELEASED</releasestatus>
+  <runasadmin>T</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate59">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Inicio</name>
+      <positionx>143</positionx>
+      <positiony>253</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <workflowsublistactiongroup scriptid="workflowaction686">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <sublist>ITEM</sublist>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </workflowsublistactiongroup>
+      </workflowactions>
+      <workflowactions triggertype="BEFORELOAD">
+        <setfieldvalueaction scriptid="workflowaction604">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>[scriptid=custbody_pd_created_by]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>@CURRENTUSER@</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction649">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYEMPLOYEE</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>@CURRENTUSER@</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </setfieldvalueaction>
+        <addbuttonaction scriptid="workflowaction671">
+          <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <label>Solicitar Aprovação</label>
+          <saverecordfirst>T</saverecordfirst>
+          <initcondition>
+            <formula><![CDATA["Tipo de Transação" IN ("Tipo de Transação1") AND "Total Amount" >= "Class (Main):PD | Valor para aprovação"]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Tipo de Transação</name>
+                <value>[scriptid=custbodypd_azos_type_transaction]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação1</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131080_7326248_947]</value>
+              </parameter>
+              <parameter>
+                <name>Total Amount</name>
+                <value>STDBODYUSERTOTAL</value>
+              </parameter>
+              <parameter>
+                <name>Class (Main):PD | Valor para aprovação</name>
+                <value>STDBODYCLASS:[scriptid=custrecord_pd_valor_para_aprovao]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </addbuttonaction>
+        <setfieldvalueaction scriptid="workflowaction688">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes>COPY|CREATE|EDIT|EMAIL|PRINT|VIEW</eventtypes>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_payment_method]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>[ACCOUNT_SPECIFIC_VALUE]</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA["Método de Pagamento - Pedido de compra" IN ("Métodos de pagamentos1") AND isEmpty("Terms") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Método de Pagamento - Pedido de compra</name>
+                <value>[scriptid=custbody_pd_met_pagamento]</value>
+              </parameter>
+              <parameter>
+                <name>Métodos de pagamentos1</name>
+                <selectrecordtype>[scriptid=customlist_pd_azos_metodo_pagamento]</selectrecordtype>
+                <value>[scriptid=customlist_pd_azos_metodo_pagamento.val_141600_7326248_989]</value>
+              </parameter>
+              <parameter>
+                <name>Terms</name>
+                <value>STDBODYTERMS</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction689">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes>COPY|CREATE|EDIT|EMAIL|PRINT|VIEW</eventtypes>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_payment_method]</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>[ACCOUNT_SPECIFIC_VALUE]</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA["Método de Pagamento - Pedido de compra" IN ("Métodos de pagamentos1","Métodos de pagamentos2") AND isEmpty("Terms") = 'T']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Método de Pagamento - Pedido de compra</name>
+                <value>[scriptid=custbody_pd_met_pagamento]</value>
+              </parameter>
+              <parameter>
+                <name>Métodos de pagamentos1</name>
+                <selectrecordtype>[scriptid=customlist_pd_azos_metodo_pagamento]</selectrecordtype>
+                <value>[scriptid=customlist_pd_azos_metodo_pagamento.val_141598_7326248_362]</value>
+              </parameter>
+              <parameter>
+                <name>Métodos de pagamentos2</name>
+                <selectrecordtype>[scriptid=customlist_pd_azos_metodo_pagamento]</selectrecordtype>
+                <value>[scriptid=customlist_pd_azos_metodo_pagamento.val_141599_7326248_613]</value>
+              </parameter>
+              <parameter>
+                <name>Terms</name>
+                <value>STDBODYTERMS</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+      </workflowactions>
+      <workflowactions triggertype="AFTERSUBMIT">
+        <setfieldvalueaction scriptid="workflowaction662">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYAPPROVALSTATUS</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>2</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA["Tipo de Transação" IN ("Tipo de Transação1","Tipo de Transação2","Tipo de Transação3","Tipo de Transação4","Tipo de Transação5","Tipo de Transação6","Tipo de Transação7","Tipo de Transação8","Tipo de Transação9","Tipo de Transação10")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Tipo de Transação</name>
+                <value>[scriptid=custbodypd_azos_type_transaction]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação1</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_128184_7326248_sb1_925]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação2</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_128183_7326248_sb1_833]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação3</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_128182_7326248_sb1_540]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação4</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_128185_7326248_sb1_391]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação5</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_128181_7326248_sb1_917]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação6</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131079_7326248_794]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação7</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131077_7326248_293]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação8</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131078_7326248_692]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação9</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_141425_7326248_728]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação10</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_178450_7326248_223]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction665">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYAPPROVALSTATUS</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>1</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA["Tipo de Transação" IN ("Tipo de Transação1") AND "Total Amount" >= "Class (Main):PD | Valor para aprovação"]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Tipo de Transação</name>
+                <value>[scriptid=custbodypd_azos_type_transaction]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação1</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131080_7326248_947]</value>
+              </parameter>
+              <parameter>
+                <name>Total Amount</name>
+                <value>STDBODYUSERTOTAL</value>
+              </parameter>
+              <parameter>
+                <name>Class (Main):PD | Valor para aprovação</name>
+                <value>STDBODYCLASS:[scriptid=custrecord_pd_valor_para_aprovao]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction666">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYAPPROVALSTATUS</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>2</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula><![CDATA["Tipo de Transação" IN ("Tipo de Transação1") AND "Total Amount" < "Class (Main):PD | Valor para aprovação"]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Tipo de Transação</name>
+                <value>[scriptid=custbodypd_azos_type_transaction]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação1</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131080_7326248_947]</value>
+              </parameter>
+              <parameter>
+                <name>Total Amount</name>
+                <value>STDBODYUSERTOTAL</value>
+              </parameter>
+              <parameter>
+                <name>Class (Main):PD | Valor para aprovação</name>
+                <value>STDBODYCLASS:[scriptid=custrecord_pd_valor_para_aprovao]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+        <setfieldvalueaction scriptid="workflowaction687">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYDUEDATE</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield>[scriptid=custbody_pd_data_vencimento]</valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>FIELD</valuetype>
+          <initcondition>
+            <formula><![CDATA[isEmpty("Terms") = 'T' AND isEmpty("Data de vencimento - Pedido de compra") = 'F']]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Terms</name>
+                <value>STDBODYTERMS</value>
+              </parameter>
+              <parameter>
+                <name>Data de vencimento - Pedido de compra</name>
+                <value>[scriptid=custbody_pd_data_vencimento]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </setfieldvalueaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition260">
+          <buttonaction>[scriptid=customworkflow2_2.workflowstate59.workflowaction671]</buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow2_2.workflowstate67]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["Tipo de Transação" IN ("Tipo de Transação1") AND "Total Amount" >= "Class (Main):PD | Valor para aprovação"]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Tipo de Transação</name>
+                <value>[scriptid=custbodypd_azos_type_transaction]</value>
+              </parameter>
+              <parameter>
+                <name>Tipo de Transação1</name>
+                <selectrecordtype>[scriptid=customlistpd_azos_type_transaction]</selectrecordtype>
+                <value>[scriptid=customlistpd_azos_type_transaction.val_131080_7326248_947]</value>
+              </parameter>
+              <parameter>
+                <name>Total Amount</name>
+                <value>STDBODYUSERTOTAL</value>
+              </parameter>
+              <parameter>
+                <name>Class (Main):PD | Valor para aprovação</name>
+                <value>STDBODYCLASS:[scriptid=custrecord_pd_valor_para_aprovao]</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate61">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Aprovado</name>
+      <positionx>543</positionx>
+      <positiony>263</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <setfieldvalueaction scriptid="workflowaction612">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYAPPROVALSTATUS</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>2</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </setfieldvalueaction>
+        <sendemailaction scriptid="workflowaction651">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Olá {employee},&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Sua fatura foi &lt;strong&gt;aprovada&lt;/strong&gt;:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Nº:&lt;/strong&gt; {tranid}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Fornecedor: &lt;/strong&gt;{entity}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Data: &lt;/strong&gt;{trandate}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Subsidiária:&lt;/strong&gt; {subsidiary}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Centro de custo:&lt;/strong&gt; {class}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Resumo (Título): &lt;/strong&gt;{memo}&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Atenciosamente.&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat></includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>F</includetransaction>
+          <isinactive>F</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield>[scriptid=custbody_pd_created_by]</recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>FIELD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>STDBODYNEXTAPPROVER</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>Fatura {tranid} - Aprovada</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+      <workflowactions triggertype="BEFORELOAD">
+        <lockrecordaction scriptid="workflowaction613">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </lockrecordaction>
+      </workflowactions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate62">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Rejeitado</name>
+      <positionx>543</positionx>
+      <positiony>183</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <setfieldvalueaction scriptid="workflowaction615">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYAPPROVALSTATUS</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield></valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield></valuejoinfield>
+          <valueselect>3</valueselect>
+          <valuetext></valuetext>
+          <valuetype>STATIC</valuetype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </setfieldvalueaction>
+        <gotorecordaction scriptid="workflowaction616">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <ineditmode>T</ineditmode>
+          <isinactive>F</isinactive>
+          <recordidfield></recordidfield>
+          <recordidjoinfield></recordidjoinfield>
+          <recordtype>[scriptid=customrecord_pd_reason_rejection]</recordtype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+          <fieldsettings>
+            <fieldsetting>
+              <targetfield>[scriptid=customrecord_pd_reason_rejection.custrecord_pd_transaction]</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect>@CURRENT@</valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>STDRECORDNAME</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield>STDBODYENTITY</valuejoinfield>
+              <valueselect></valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>[scriptid=customrecord_pd_reason_rejection.custrecord_pd_employee]</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect>@CURRENTUSER@</valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+          </fieldsettings>
+        </gotorecordaction>
+        <sendemailaction scriptid="workflowaction652">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Olá {employee},&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Sua fatura foi &lt;strong&gt;rejeitada&lt;/strong&gt;:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Nº:&lt;/strong&gt; {tranid}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Fornecedor: &lt;/strong&gt;{entity}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Data: &lt;/strong&gt;{trandate}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Subsidiária:&lt;/strong&gt; {subsidiary}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Centro de custo:&lt;/strong&gt; {class}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Resumo (Título): &lt;/strong&gt;{memo}&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat></includeformat>
+          <includerecordlink>F</includerecordlink>
+          <includetransaction>F</includetransaction>
+          <isinactive>F</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield>[scriptid=custbody_pd_created_by]</recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>FIELD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>STDBODYNEXTAPPROVER</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>Fatura {tranid} - Rejeitada</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+      <workflowactions triggertype="BEFORELOAD">
+        <setdisplaylabelaction scriptid="workflowaction617">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <displaylabel>Rejeitado pelo aprovador</displaylabel>
+          <eventtypes></eventtypes>
+          <field>STDBODYNEXTAPPROVER</field>
+          <isinactive>F</isinactive>
+          <issublistfield>F</issublistfield>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </setdisplaylabelaction>
+        <lockrecordaction scriptid="workflowaction623">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </lockrecordaction>
+      </workflowactions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate67">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Aprovação Financeiro</name>
+      <positionx>353</positionx>
+      <positiony>253</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <setfieldvalueaction scriptid="workflowaction667">
+          <clienttriggerfields></clienttriggerfields>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <field>STDBODYNEXTAPPROVER</field>
+          <isinactive>F</isinactive>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <valuechecked>F</valuechecked>
+          <valuedate></valuedate>
+          <valuefield>[scriptid=custrecord_pd_financeiro_para_aprovao]</valuefield>
+          <valueformula></valueformula>
+          <valuejoinfield>STDBODYCLASS</valuejoinfield>
+          <valueselect></valueselect>
+          <valuetext></valuetext>
+          <valuetype>FIELD</valuetype>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </setfieldvalueaction>
+        <sendemailaction scriptid="workflowaction668">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>&lt;p&gt;Fatura {tranid} pendente da sua aprovação!&lt;br /&gt;&lt;br /&gt;Memorando: {memo}&lt;br /&gt;Data de vencimento: {duedate}&lt;br /&gt;Fornecedor: &lt;strong&gt;{entity}&lt;/strong&gt;&lt;br /&gt;Valor: {usertotal}&lt;/p&gt;</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <includeformat></includeformat>
+          <includerecordlink>T</includerecordlink>
+          <includetransaction>F</includetransaction>
+          <isinactive>F</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield>STDBODYNEXTAPPROVER</recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>FIELD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>[scriptid=custbody_pd_created_by]</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>Fatura {tranid} - Aprovação do Responsável</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+      <workflowactions triggertype="BEFORELOAD">
+        <addbuttonaction scriptid="workflowaction669">
+          <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <label>Aprovar - Financeiro</label>
+          <saverecordfirst>F</saverecordfirst>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </addbuttonaction>
+        <addbuttonaction scriptid="workflowaction670">
+          <checkconditionbeforeexecution>T</checkconditionbeforeexecution>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <label>Rejeitar - Financeiro</label>
+          <saverecordfirst>F</saverecordfirst>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </addbuttonaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition261">
+          <buttonaction>[scriptid=customworkflow2_2.workflowstate67.workflowaction669]</buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow2_2.workflowstate61]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </workflowtransition>
+        <workflowtransition scriptid="workflowtransition262">
+          <buttonaction>[scriptid=customworkflow2_2.workflowstate67.workflowaction670]</buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes>ACTION|RECORDACTION|CONSOLRATEADJUSTOR|FIPARSER|BANKSTATEMENTPARSER|CUSTOMMASSUPDATE|EMAILCAPTURE|CLIENT|OFFLINECLIENT|BANKCONNECTIVITY|FICONNECTIVITY|CUSTOMTOOL|DEBUGGER|PLATFORMEXTENSION|WORKFLOW|ADVANCEDREVREC|CSVIMPORT|SDFINSTALLATION|BUNDLEINSTALLATION|USERINTERFACE|CUSTOMGLLINES|MAPREDUCE|TAXCALCULATION|OTHER|SHIPPINGPARTNERS|DATASETBUILDER|OCRPLUGIN|WORKBOOKBUILDER|PORTLET|PAYMENTPOSTBACK|PAYMENTGATEWAY|PROMOTIONS|RESTLET|USEREVENT|SCHEDULED|SUITELET|RESTWEBSERVICES|WEBSERVICES</contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow2_2.workflowstate62]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

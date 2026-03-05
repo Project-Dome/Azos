@@ -1,0 +1,157 @@
+<centertab scriptid="custcentertab11">
+  <allcustomers>F</allcustomers>
+  <allemployees>F</allemployees>
+  <allpartners>F</allpartners>
+  <allroles>T</allroles>
+  <allvendors>F</allvendors>
+  <audslctrole></audslctrole>
+  <center>[scriptid=custcenter_nsps]</center>
+  <label>Lists</label>
+  <portlets>
+    <portlet scriptid="portlet_n9308_nl">
+      <isportletshown>T</isportletshown>
+      <portlet>RECENTRECORDS</portlet>
+      <portletcolumn>1</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n9108_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>SEARCHFORM</portlet>
+      <portletcolumn>1</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n670_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>CALENDAR</portlet>
+      <portletcolumn>1</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n12_nl">
+      <isportletshown>T</isportletshown>
+      <portlet>QUICKSEARCH</portlet>
+      <portletcolumn>1</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n13_nl">
+      <isportletshown>T</isportletshown>
+      <portlet>SETTINGS</portlet>
+      <portletcolumn>1</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n18_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>SNAPSHOTS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8136_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8013_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8012_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8011_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8010_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8139_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8138_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8137_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8014_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n8135_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>ANALYTICS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n22095_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>DASHBOARD_APP</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n22096_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>DASHBOARD_APP</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n22091_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>DASHBOARD_APP</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n22094_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>DASHBOARD_APP</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n22093_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>DASHBOARD_APP</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n22092_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>DASHBOARD_APP</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n19_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>REMINDERS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n15_nl">
+      <isportletshown>T</isportletshown>
+      <portlet>TASKLINKS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n17_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>CALENDAR</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n733_nl">
+      <isportletshown>T</isportletshown>
+      <portlet>SEARCHRESULTS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n9008_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>LIST</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n9208_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>SHORTCUTS</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+    <portlet scriptid="portlet_n7702_nl">
+      <isportletshown>F</isportletshown>
+      <portlet>KPIREPORT</portlet>
+      <portletcolumn>2</portletcolumn>
+    </portlet>
+  </portlets>
+</centertab>

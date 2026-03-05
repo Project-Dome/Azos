@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_pd_tipo_regra">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PD | Tipo de regra</name>
+  <customvalues>
+    <customvalue scriptid="val_116429_7326248_870">
+      <isinactive>F</isinactive>
+      <value>Entrada</value>
+    </customvalue>
+    <customvalue scriptid="val_116430_7326248_179">
+      <isinactive>F</isinactive>
+      <value>Saída</value>
+    </customvalue>
+  </customvalues>
+</customlist>

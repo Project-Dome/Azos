@@ -1,0 +1,10 @@
+<centertab scriptid="custcentertab_pd_azos">
+  <allcustomers>F</allcustomers>
+  <allemployees>T</allemployees>
+  <allpartners>F</allpartners>
+  <allroles>T</allroles>
+  <allvendors>F</allvendors>
+  <audslctrole></audslctrole>
+  <center>ALL</center>
+  <label>PD | AZOS</label>
+</centertab>

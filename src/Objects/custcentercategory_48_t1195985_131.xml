@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_48_t1195985_131">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Subscriptions</label>
+  <links>
+    <link>
+      <linkid>LIST_SUBSCRIPTIONPLAN</linkid>
+      <linklabel></linklabel>
+      <shortlist>T</shortlist>
+    </link>
+  </links>
+</centercategory>

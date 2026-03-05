@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_ns_pm_projectype">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite PM Project Type</name>
+  <customvalues>
+    <customvalue scriptid="val_64886_t1247005_322">
+      <isinactive>F</isinactive>
+      <value>Shared</value>
+    </customvalue>
+    <customvalue scriptid="val_64887_t1247005_335">
+      <isinactive>F</isinactive>
+      <value>SuiteSuccess</value>
+    </customvalue>
+    <customvalue scriptid="val_64899_t1247005_789">
+      <isinactive>F</isinactive>
+      <value>Accelerated</value>
+    </customvalue>
+  </customvalues>
+</customlist>

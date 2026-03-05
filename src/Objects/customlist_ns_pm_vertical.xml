@@ -1,0 +1,32 @@
+<customlist scriptid="customlist_ns_pm_vertical">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Vertical</name>
+  <customvalues>
+    <customvalue scriptid="val_64892_t1247005_505">
+      <isinactive>F</isinactive>
+      <value>Retail/eCommerce</value>
+    </customvalue>
+    <customvalue scriptid="val_64893_t1247005_578">
+      <isinactive>F</isinactive>
+      <value>General Business</value>
+    </customvalue>
+    <customvalue scriptid="val_64894_t1247005_153">
+      <isinactive>F</isinactive>
+      <value>Manufacturing</value>
+    </customvalue>
+    <customvalue scriptid="val_64895_t1247005_636">
+      <isinactive>F</isinactive>
+      <value>Warehouse and Distribution</value>
+    </customvalue>
+    <customvalue scriptid="val_64896_t1247005_729">
+      <isinactive>F</isinactive>
+      <value>Services</value>
+    </customvalue>
+    <customvalue scriptid="val_64897_t1247005_446">
+      <isinactive>F</isinactive>
+      <value>Software</value>
+    </customvalue>
+  </customvalues>
+</customlist>

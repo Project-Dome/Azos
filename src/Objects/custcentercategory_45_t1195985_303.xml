@@ -1,0 +1,97 @@
+<centercategory scriptid="custcentercategory_45_t1195985_303">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Supply Chain</label>
+  <links>
+    <link>
+      <linkid>LIST_MFGCOSTTEMPLATE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_MFGROUTING</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_BIN</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_ITEM_REVISION</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_DISTRIBUTIONNETWORK</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_BILLOFDISTRIBUTION</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_BOM</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_INVENTORYSTATUS</linkid>
+      <linklabel>Inventory Statuses</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SC_CONTROLTOWERDASHBRD</linkid>
+      <linklabel>Control Tower Dashboard</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_ITEMPROCESSFAMILY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_ITEMPROCESSGROUP</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_ZONE</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_PICKSTRATEGY</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SC_SNAPSHOTS</linkid>
+      <linklabel>Supply Chain Snapshots</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SUPPLYCHAINSNAPSHOTSIMULATION</linkid>
+      <linklabel>Supply Chain Snapshot Simulations</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SCHEDULEDSUPPLYCHAINSNAPSHOTREFRESH</linkid>
+      <linklabel>Supply Chain Snapshot Schedules</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_VENDORPERFORMANCE</linkid>
+      <linklabel>Review Vendor Performances</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_GLOBALINVTRELATIONSHIP</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

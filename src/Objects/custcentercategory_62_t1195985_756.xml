@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_62_t1195985_756">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Intercompany Automation</label>
+  <links>
+    <link>
+      <linkid>LIST_BALANCE_OVERVIEW</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

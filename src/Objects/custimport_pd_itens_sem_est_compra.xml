@@ -1,0 +1,70 @@
+<savedcsvimport scriptid="custimport_pd_itens_sem_est_compra">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <description>Importação de itens sem controle de estoque para compra.</description>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PD | Itens sem controle de estoque para compra</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>NONINVENTORYPURCHASEITEM</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>NONINVENTORYPURCHASEITEM</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>NONINVENTORYPURCHASEITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazilreports, scriptid=custitem_brr_l_sped_efd_type]</field>
+          <columnreference>
+            <column>SPED EFD TIPO</column>
+            <file>NONINVENTORYPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXPENSEACCOUNT</field>
+          <columnreference>
+            <column>ID conta de despesas</column>
+            <file>NONINVENTORYPURCHASEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEMID</field>
+          <columnreference>
+            <column>NOME/NÚMERO DO ITEM</column>
+            <file>NONINVENTORYPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>2</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>UNITSTYPE</field>
+          <value>3</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

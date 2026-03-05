@@ -1,0 +1,60 @@
+<customlist scriptid="customlist_ns_ts_bus_process_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>NetSuite TS Bus Process List</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>All</value>
+    </customvalue>
+    <customvalue scriptid="value_11_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Call to Resolution</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Design to Build</value>
+    </customvalue>
+    <customvalue scriptid="value_12_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Hire to Pay </value>
+    </customvalue>
+    <customvalue scriptid="value_7_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Lead to Quote</value>
+    </customvalue>
+    <customvalue scriptid="value_6_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Marketing to ROI</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Order to Cash</value>
+    </customvalue>
+    <customvalue scriptid="value_13_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Other</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Procure to Pay</value>
+    </customvalue>
+    <customvalue scriptid="value_10_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Project to Cash</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Record to Report</value>
+    </customvalue>
+    <customvalue scriptid="value_9_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Resource to Project</value>
+    </customvalue>
+    <customvalue scriptid="value_8_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Web to Order</value>
+    </customvalue>
+  </customvalues>
+</customlist>

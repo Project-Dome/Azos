@@ -1,0 +1,86 @@
+<savedcsvimport scriptid="custimport_731_7326248_857">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <customrecord>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer]</customrecord>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Ted</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>CUSTOMRECORD</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>CUSTOMRECORD</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>CUSTOMRECORD</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_bank]</field>
+          <columnreference>
+            <column>Banco</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_payt_info]</field>
+          <columnreference>
+            <column>Tipo de informação de pagamento</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_pixkey_type]</field>
+          <columnreference>
+            <column>Tipo de chave Pix</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_l_vendor]</field>
+          <columnreference>
+            <column>ID externo</column>
+            <file>CUSTOMRECORD</file>
+            <type>EXTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=customrecord_brl_vendor_payment_prefer.custrecord_brl_venpaytpref_t_pixkey]</field>
+          <columnreference>
+            <column>Chave Pix</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>NAME</field>
+          <columnreference>
+            <column>Nome</column>
+            <file>CUSTOMRECORD</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

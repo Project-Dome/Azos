@@ -1,0 +1,25 @@
+<portlet scriptid="customscriptns_project_timeline_portlet">
+  <defaultfunction>projecttimeline</defaultfunction>
+  <description>Will show the implementation bundles latest attached project timeline if present</description>
+  <isinactive>F</isinactive>
+  <name>Netsuite Project Timeline</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <notifyuser>F</notifyuser>
+  <portlettype>HTML</portlettype>
+  <scriptfile>[/SuiteBundles/Bundle 39609/NetSuiteONEProjectTimelinePortlet.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeployns_project_timeline_portleta">
+      <allemployees>F</allemployees>
+      <allpartners>F</allpartners>
+      <allroles>F</allroles>
+      <audslctrole>ADMINISTRATOR|[scriptid=customrole_ns_ps_implementation_team]|[scriptid=customrole1001_3]</audslctrole>
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <runasrole></runasrole>
+      <status>RELEASED</status>
+      <title>Netsuite Project Timeline</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</portlet>

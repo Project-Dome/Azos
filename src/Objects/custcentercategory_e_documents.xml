@@ -1,0 +1,55 @@
+<centercategory scriptid="custcentercategory_e_documents">
+  <center>BASIC</center>
+  <centertab>BASICCENTERSETUP</centertab>
+  <label translate="T">[scriptid=custcollection_ei_translations.label_custcentercategory_e_documents]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_e_document_package]</linklabel>
+      <linkobject>[scriptid=customrecord_psg_ei_standards]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>E-Document Templates</linklabel>
+      <linkobject>[scriptid=customrecord_psg_ei_template]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_e_document_sending_]</linklabel>
+      <linkobject>[scriptid=customrecord_ei_sending_method]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_inbound_e_document_]</linklabel>
+      <linkobject>[scriptid=customrecord_psg_ei_validation_plugin]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_e_document_template_response]</linklabel>
+      <linkobject>[scriptid=customrecord_psg_ei_transres_template]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_e_document_email_te]</linklabel>
+      <linkobject>[scriptid=customrecord_psg_ei_email_custom]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_e_document_preferen]</linklabel>
+      <linkobject>[scriptid=customscript_ei_prefs.customdeploy_ei_prefs]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_ei_translations.linklabel_custcentercategory_e_documents_builder_kit_form]</linklabel>
+      <linkobject>[scriptid=customscript_ei_builder_kit_form_su.customdeploy_ei_builder_kit_form_su]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

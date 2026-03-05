@@ -1,0 +1,85 @@
+<savedcsvimport scriptid="custimport_615_7326248_740">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>PD | teste de importação</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>SERVICEPURCHASEITEM</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>F</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>SERVICEPURCHASEITEM</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>SERVICEPURCHASEITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazilreports, scriptid=custitem_brr_l_efd_nature_income]</field>
+          <columnreference>
+            <column>NATUREZA DE RENDIMENTO (EFD-Reinf)</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazilreports, scriptid=custitem_brr_l_sped_efd_type]</field>
+          <value>10</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.fasttaxengine, scriptid=custitem_fte_item_l_itemcode]</field>
+          <columnreference>
+            <column>ID</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DISPLAYNAME</field>
+          <columnreference>
+            <column>NOME/CÓDIGO DE EXIBIÇÃO</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXPENSEACCOUNT</field>
+          <columnreference>
+            <column>ID conta</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEMID</field>
+          <columnreference>
+            <column>NOME/NÚMERO DO ITEM</column>
+            <file>SERVICEPURCHASEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>3</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

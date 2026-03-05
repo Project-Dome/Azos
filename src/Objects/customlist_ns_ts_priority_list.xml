@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ns_ts_priority_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite TS Priority List</name>
+  <customvalues>
+    <customvalue scriptid="value_5_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>P4 - Low</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>P3 - Moderate</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>P2 - Serious</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>P1 - Critical</value>
+    </customvalue>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>P0 - Blocker</value>
+    </customvalue>
+  </customvalues>
+</customlist>

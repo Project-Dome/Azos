@@ -1,0 +1,12 @@
+<centercategory scriptid="custcentercategory_55_t1195985_654">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Mailing</label>
+  <links>
+    <link>
+      <linkid>LIST_UNDELIVEREDEMAIL</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

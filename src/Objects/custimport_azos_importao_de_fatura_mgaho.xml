@@ -1,0 +1,223 @@
+<savedcsvimport scriptid="custimport_azos_importao_de_fatura_mgaho">
+  <charencoding>UTF_8</charencoding>
+  <columndelimiter>SEMICOLON</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>COMMA</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>faturas cutover</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <queuenumber>1</queuenumber>
+  <recordtype>VENDORBILL</recordtype>
+  <runserversuitescript>T</runserversuitescript>
+  <transactionform>[scriptid=custform_pd_azos_vendorbill]</transactionform>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>VENDORBILL</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>VENDORBILL:ITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>CLASS</field>
+          <columnreference>
+            <column>ID Centro de custos - Linha</column>
+            <file>VENDORBILL</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DESCRIPTION</field>
+          <columnreference>
+            <column>Descrição do item</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ITEM</field>
+          <value>774</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>QUANTITY</field>
+          <columnreference>
+            <column>Quantidade</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>RATE</field>
+          <columnreference>
+            <column>Taxa</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+    <recordmapping>
+      <record>VENDORBILL</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ACCOUNT</field>
+          <columnreference>
+            <column>ID Conta</column>
+            <file>VENDORBILL</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CLASS</field>
+          <columnreference>
+            <column>ID Centro de custos</column>
+            <file>VENDORBILL</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>CURRENCY</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_cent_clear_house]</field>
+          <columnreference>
+            <column>Câmara Centralizadora do CNAB</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_payment_method]</field>
+          <columnreference>
+            <column>Método de Pagamento do CNAB</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_subs_bank_info]</field>
+          <columnreference>
+            <column>Informações Bancárias da Subsidiária</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_ted_purpose]</field>
+          <columnreference>
+            <column>Finalidade do TED do CNAB</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_type_of_payment]</field>
+          <columnreference>
+            <column>Tipo de Pagamento do CNAB</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_type_of_service]</field>
+          <columnreference>
+            <column>Tipo de Serviço CNAB</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_vendor_paymt_pref]</field>
+          <columnreference>
+            <column>Prefer. de Pagto do Fornecedor</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_bar_code]</field>
+          <columnreference>
+            <column>Código de Barras de Boleto</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>[scriptid=custbodypd_azos_type_transaction]</field>
+          <columnreference>
+            <column>Tipo de Transação</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DUEDATE</field>
+          <columnreference>
+            <column>Data de Vencimento</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ENTITY</field>
+          <columnreference>
+            <column>ID Fornecedor</column>
+            <file>VENDORBILL</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXCHANGERATE</field>
+          <value>1.00</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>EXTERNALID</field>
+          <columnreference>
+            <column>ID Externo</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>LOCATION</field>
+          <value>1</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>MEMO</field>
+          <columnreference>
+            <column>Memorando</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>SUBSIDIARY</field>
+          <value>2</value>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TRANDATE</field>
+          <columnreference>
+            <column>Data</column>
+            <file>VENDORBILL</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_58_t1195985_258">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Search</label>
+  <links>
+    <link>
+      <linkid>LIST_SAVEDSEARCH</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>LIST_SAVED_SEARCH_WITH_HTML</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

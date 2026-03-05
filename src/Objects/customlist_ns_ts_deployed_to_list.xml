@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_ns_ts_deployed_to_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite TS Deployed To List</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Production</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>T</isinactive>
+      <value>Dev Sandbox</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Sandbox</value>
+    </customvalue>
+  </customvalues>
+</customlist>

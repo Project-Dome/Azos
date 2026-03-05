@@ -1,0 +1,68 @@
+<customlist scriptid="customlist74">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NS UAT Region</name>
+  <customvalues>
+    <customvalue scriptid="val_51708_t1195985_717">
+      <isinactive>F</isinactive>
+      <value>None</value>
+    </customvalue>
+    <customvalue scriptid="val_51706_t1195985_859">
+      <isinactive>F</isinactive>
+      <value>ANZ</value>
+    </customvalue>
+    <customvalue scriptid="val_54462_t1195985_325">
+      <isinactive>F</isinactive>
+      <value>MX</value>
+    </customvalue>
+    <customvalue scriptid="val_51704_t1195985_387">
+      <isinactive>F</isinactive>
+      <value>NA</value>
+    </customvalue>
+    <customvalue scriptid="val_51707_t1195985_801">
+      <isinactive>F</isinactive>
+      <value>SGP</value>
+    </customvalue>
+    <customvalue scriptid="val_51705_t1195985_741">
+      <isinactive>F</isinactive>
+      <value>EMEA</value>
+    </customvalue>
+    <customvalue scriptid="val_56523_t1195985_724">
+      <isinactive>F</isinactive>
+      <value>DE</value>
+    </customvalue>
+    <customvalue scriptid="val_56524_t1195985_731">
+      <isinactive>F</isinactive>
+      <value>FR</value>
+    </customvalue>
+    <customvalue scriptid="val_56525_t1195985_864">
+      <isinactive>F</isinactive>
+      <value>NORDIC</value>
+    </customvalue>
+    <customvalue scriptid="val_56526_t1195985_929">
+      <isinactive>F</isinactive>
+      <value>UK</value>
+    </customvalue>
+    <customvalue scriptid="val_57970_t1195985_345">
+      <isinactive>F</isinactive>
+      <value>IN</value>
+    </customvalue>
+    <customvalue scriptid="val_57971_t1195985_960">
+      <isinactive>F</isinactive>
+      <value>CN</value>
+    </customvalue>
+    <customvalue scriptid="val_57972_t1195985_169">
+      <isinactive>F</isinactive>
+      <value>HK</value>
+    </customvalue>
+    <customvalue scriptid="val_59238_t1195985_286">
+      <isinactive>F</isinactive>
+      <value>JP</value>
+    </customvalue>
+    <customvalue scriptid="val_60585_t1195985_773">
+      <isinactive>F</isinactive>
+      <value>PH</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_ns_one_req_qualification">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Qualification</name>
+  <customvalues>
+    <customvalue scriptid="val_51379_t1195985_405">
+      <isinactive>F</isinactive>
+      <value>Primary</value>
+    </customvalue>
+    <customvalue scriptid="val_51380_t1195985_732">
+      <isinactive>F</isinactive>
+      <value>Secondary</value>
+    </customvalue>
+    <customvalue scriptid="val_51381_t1195985_668">
+      <isinactive>F</isinactive>
+      <value>Tertiary</value>
+    </customvalue>
+  </customvalues>
+</customlist>

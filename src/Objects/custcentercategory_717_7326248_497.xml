@@ -1,0 +1,43 @@
+<centercategory scriptid="custcentercategory_717_7326248_497">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_pd_azos]</centertab>
+  <label>Buscas salvas</label>
+  <links>
+    <link>
+      <linklabel>Plano de Contas - Normal</linklabel>
+      <linkobject>[scriptid=customsearch830]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Plano de Contas - SUSEP</linklabel>
+      <linkobject>[scriptid=customsearch833]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Livro razão - Seguradora (Gepro)</linklabel>
+      <linkobject>[scriptid=customsearchtransactiondefaultview_2_2_2]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Livro razão - Seguradora (Resumo)</linklabel>
+      <linkobject>[scriptid=customsearchtransactiondefaultview_2_2_3]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Livro razão - Geral</linklabel>
+      <linkobject>[scriptid=customsearchtransactiondefaultview_2_2_6]</linkobject>
+      <linktasktype>SRCH_FORM</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>CNAB - Fatura Reenvio Banco</linklabel>
+      <linkobject>[scriptid=customsearch_pd_fatura_liberado_pelo_ban]</linkobject>
+      <linktasktype>SRCH_RSLT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

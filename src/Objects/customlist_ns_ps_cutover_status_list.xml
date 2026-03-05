@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ns_ps_cutover_status_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite PS Cutover Status</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Not Started</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>In Progress</value>
+    </customvalue>
+    <customvalue scriptid="val_68898_t1534138_174">
+      <isinactive>F</isinactive>
+      <value>Import File Revision Requested</value>
+    </customvalue>
+    <customvalue scriptid="val_68900_t1534138_590">
+      <isinactive>F</isinactive>
+      <value>Customer Validation Needed</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Customer Validated</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_ns_one_change_log_rev_dec">
+  <description>This list is used on the Change Log record in the Decision field.</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite Review Decision</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Approved</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Denied</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Pending</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_ns_ps_dmt">
+  <center>BASIC</center>
+  <centertab>[scriptid=custcentertab_nsps_implementationclassic]</centertab>
+  <label>Data Migration</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customrecord_ns_migration_tracker]</linkobject>
+      <linktasktype>LIST</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

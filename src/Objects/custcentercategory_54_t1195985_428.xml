@@ -1,0 +1,17 @@
+<centercategory scriptid="custcentercategory_54_t1195985_428">
+  <center>[scriptid=custcenter_nsps]</center>
+  <centertab>[scriptid=custcentertab11]</centertab>
+  <label>Website</label>
+  <links>
+    <link>
+      <linkid>ADMI_HEADING</linkid>
+      <linklabel>--- Menu items have been moved to: Navigation Menu Bar &gt; Commerce tab ---</linklabel>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linkid>ADMI_GO_TO_TAB_COMMERCE_WS</linkid>
+      <linklabel></linklabel>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

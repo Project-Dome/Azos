@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_pd_azos_metodo_pagamento">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>F</isordered>
+  <name>Métodos de pagamentos</name>
+  <customvalues>
+    <customvalue scriptid="val_141600_7326248_989">
+      <isinactive>F</isinactive>
+      <value>Boleto</value>
+    </customvalue>
+    <customvalue scriptid="val_141598_7326248_362">
+      <isinactive>F</isinactive>
+      <value>Pix</value>
+    </customvalue>
+    <customvalue scriptid="val_141599_7326248_613">
+      <isinactive>F</isinactive>
+      <value>Transferência</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,2110 @@
+<transactionForm scriptid="custform_azos_ff_std_credit_card_charge" standard="STANDARDCREDITCARDCHARGE">
+  <name>AZOS - Cobrança de cartão de crédito</name>
+  <recordType>CREDITCARDCHARGE</recordType>
+  <inactive>F</inactive>
+  <preferred>T</preferred>
+  <storedWithRecord>F</storedWithRecord>
+  <mainFields>
+    <fieldGroup scriptid="primaryinformation">
+      <label>Informações principais</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>CUSTOMFORM</id>
+          <label>Formulário personalizado</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>ENTITY</id>
+          <label>Fornecedor</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TRANDATE</id>
+          <label>Data</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TRANSACTIONNUMBER</id>
+          <label>Número da transação</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>T</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>SUBSIDIARY</id>
+          <label>Subsidiária</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>MEMO</id>
+          <label>Memorando</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>POSTINGPERIOD</id>
+          <label>Período contábil</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>ACCOUNT</id>
+          <label>Conta</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>T</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>BALANCE</id>
+          <label>Saldo da conta</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>INLINETEXT</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TOTAL</id>
+          <label>Total da cobrança</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>USERTAXTOTAL</id>
+          <label>Tax</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>TAXTOTAL</id>
+          <label>Imposto</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </fieldGroup>
+    <fieldGroup scriptid="fieldgroup_atlas_transactioninfo">
+      <label>Informações de transação</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>TRANID</id>
+          <label>N.º de referência</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CURRENCY</id>
+          <label>Moeda</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>T</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>EXCHANGERATE</id>
+          <label>Taxa de câmbio</label>
+          <visible>T</visible>
+          <mandatory>T</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </fieldGroup>
+    <fieldGroup scriptid="fieldgroup_atlas_segmentation">
+      <label>Segmentação</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+      <fields position="MIDDLE">
+        <field>
+          <id>DEPARTMENT</id>
+          <label>Departamento</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>CLASS</id>
+          <label>Classe</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>LOCATION</id>
+          <label>Localidade</label>
+          <visible>T</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </fieldGroup>
+    <fieldGroup scriptid="classification">
+      <label>Classificação</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+    </fieldGroup>
+    <fieldGroup scriptid="intercompanymanagement">
+      <label>Gerenciamento intercompany</label>
+      <visible>T</visible>
+      <showTitle>T</showTitle>
+      <singleColumn>F</singleColumn>
+    </fieldGroup>
+    <defaultFieldGroup>
+      <fields position="MIDDLE">
+        <field>
+          <id>EXCLUDEFROMGLNUMBERING</id>
+          <label>Excluir transação da numeração de auditoria do livro-razão</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.suitesuccess.erpcore, scriptid=custbody_atlas_inv_adj_reason]</id>
+          <label>Motivo do ajuste de estoque</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=custbodypd_azos_type_transaction]</id>
+          <label>Tipo de Transação</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[scriptid=custbody1]</id>
+          <label>PD - STATUS</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>DISABLED</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tran_d_jrnl_post_close_dt]</id>
+          <label>Post-Closing Journal Posting Date</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tran_f_set_income_clsjrnl]</id>
+          <label>Set as an Income Accounts Closing Journal for Brazil</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+          <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tran_f_set_postclose_jrnl]</id>
+          <label>Set as a Post-Closing Journal for Brazil</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+          <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tax_bill_i_creat_from]</id>
+          <label>Origin Assessment</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>INLINETEXT</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tax_bill_l_assess_period]</id>
+          <label>Assessment Period</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tax_bill_t_sub_tax_reg]</id>
+          <label>Federal Tax Registration of the Subsidiary</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>DISABLED</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tax_bill_t_ven_tax_reg]</id>
+          <label>Federal Tax Registration of the Vendor</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>DISABLED</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+        <field>
+          <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tax_bill_l_revenue_code]</id>
+          <label>Revenue Code</label>
+          <visible>F</visible>
+          <mandatory>F</mandatory>
+          <displayType>NORMAL</displayType>
+          <columnBreak>F</columnBreak>
+          <sameRowAsPrevious>F</sameRowAsPrevious>
+        </field>
+      </fields>
+    </defaultFieldGroup>
+  </mainFields>
+  <tabs>
+    <tab>
+      <id>TRANSACTIONITEMS</id>
+      <label>Despesas e itens</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_f_disable_inventory]</id>
+              <label>Disable Inventory Adjustment</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>ITEM</id>
+          <neverEmpty>F</neverEmpty>
+          <columns>
+            <column>
+              <id>ITEM</id>
+              <label>Item</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>DISPLAYNAME</id>
+              <label>Display Name</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>DESCRIPTION</id>
+              <label>Descrição</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>DEPARTMENT</id>
+              <label>Departamento</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>CLASS</id>
+              <label>Classe</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>LOCATION</id>
+              <label>Localidade</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>QUANTITY</id>
+              <label>Quantidade</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>UNITS</id>
+              <label>Unidades</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>RATE</id>
+              <label>Taxa</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>AMOUNT</id>
+              <label>Valor</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>GROSSAMT</id>
+              <label>Valor bruto</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>OPTIONS</id>
+              <label>Opções</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>GLNUMBER</id>
+              <label>Nº do livro-razão</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>GLSEQUENCE</id>
+              <label>Sequência de numeração de auditoria do livro-razão</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>CUSTOMER</id>
+              <label>Customer</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_rc_po]</id>
+              <label>Código do motivo (PC)</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_rc_so]</id>
+              <label>Código de motivo (PV)</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>ISBILLABLE</id>
+              <label>Billable</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_return_reason]</id>
+              <label>Motivo da devolução</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_promise_date]</id>
+              <label>Promise Date</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>TAXAMOUNT</id>
+              <label>Tax Amount</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcoll_atlas_rc_if]</id>
+              <label>Código do motivo do envio</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_str_tax_reporting_category]</id>
+              <label>Tax Reporting Category</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_str_tax_item_type]</id>
+              <label>Tax Item Type</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazilfasttaxenginedatarecords, scriptid=custcol_ftebr_t_origin_code]</id>
+              <label>Origin Code</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazilfasttaxenginedatarecords, scriptid=custcol_ftebr_l_cfop_code]</id>
+              <label>CFOP Code</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custcol_brl_t_addition_number]</id>
+              <label>Addition Number</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custcol_brl_t_addition_seq_number]</id>
+              <label>Addition Sequential Number</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custcol_brl_t_foreign_mfr_code]</id>
+              <label>Foreign Manufacturer Code</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_sistema_origem]</id>
+              <label>Sistema origem</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_cd_susep]</id>
+              <label>Cód SUSEP</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_uf_risco]</id>
+              <label>UF Risco</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_ramo]</id>
+              <label>Ramo</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_cd_produto]</id>
+              <label>Cód Produto</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_ressegurador]</id>
+              <label>Ressegurador</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_plano]</id>
+              <label>Plano</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_pd_descricao_2]</id>
+              <label>Descrição 2</label>
+              <visible>F</visible>
+            </column>
+          </columns>
+        </subList>
+        <subList>
+          <id>EXPENSE</id>
+          <neverEmpty>F</neverEmpty>
+          <columns>
+            <column>
+              <id>ACCOUNT</id>
+              <label>Conta</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>DEPARTMENT</id>
+              <label>Departamento</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>CLASS</id>
+              <label>Classe</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>LOCATION</id>
+              <label>Localidade</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>MEMO</id>
+              <label>Descrição da linha</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>AMOUNT</id>
+              <label>Valor</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>CUSTOMER</id>
+              <label>Customer</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>GROSSAMT</id>
+              <label>Valor bruto</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>ISBILLABLE</id>
+              <label>Billable</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>CATEGORY</id>
+              <label>Categoria</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_promise_date]</id>
+              <label>Promise Date</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcoll_atlas_rc_if]</id>
+              <label>Código do motivo do envio</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_rc_po]</id>
+              <label>Código de motivo (PC)</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_rc_so]</id>
+              <label>Código de motivo (PV)</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.suitesuccess.erpcore, scriptid=custcol_atlas_return_reason]</id>
+              <label>Motivo da devolução</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_str_tax_reporting_category]</id>
+              <label>Tax Reporting Category</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_str_tax_item_type]</id>
+              <label>Tax Item Type</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazilfasttaxenginedatarecords, scriptid=custcol_ftebr_t_origin_code]</id>
+              <label>Origin Code</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazilfasttaxenginedatarecords, scriptid=custcol_ftebr_l_cfop_code]</id>
+              <label>CFOP Code</label>
+              <visible>T</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custcol_brl_t_addition_number]</id>
+              <label>Addition Number</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custcol_brl_t_addition_seq_number]</id>
+              <label>Addition Sequential Number</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custcol_brl_t_foreign_mfr_code]</id>
+              <label>Foreign Manufacturer Code</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_sistema_origem]</id>
+              <label>Sistema origem</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_cd_susep]</id>
+              <label>Cód SUSEP</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_uf_risco]</id>
+              <label>UF Risco</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_ramo]</id>
+              <label>Ramo</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcolpd_cd_produto]</id>
+              <label>Cód Produto</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_ressegurador]</id>
+              <label>Ressegurador</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_plano]</id>
+              <label>Plano</label>
+              <visible>F</visible>
+            </column>
+            <column>
+              <id>[scriptid=custcol_pd_descricao_2]</id>
+              <label>Descrição 2</label>
+              <visible>F</visible>
+            </column>
+          </columns>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TRANSACTIONRELATEDRECORDS</id>
+      <label>Registros relacionados</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>REIMBURSEMENTS</id>
+          <label>Reimbursements</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TRANSACTIONRELATIONSHIPS</id>
+      <label>Relacionamentos</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>CRMCONTACTS</id>
+          <label>Contatos</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TRANSACTIONCOMMUNICATION</id>
+      <label>Comunicação</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>MEDIAITEM</id>
+          <label>Arquivos</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>MESSAGES</id>
+          <label>Mensagens</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>ACTIVITIES</id>
+          <label>Atividades</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>EVENTS</id>
+          <label>Eventos</label>
+          <visible>F</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>TASKS</id>
+          <label>Tarefas</label>
+          <visible>F</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>CALLS</id>
+          <label>Chamadas telefônicas</label>
+          <visible>F</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>USERNOTES</id>
+          <label>Notas do usuário</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TRANSACTIONSYSTEMINFORMATION</id>
+      <label>Informações do sistema</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>SYSTEMNOTES</id>
+          <label>Auditoria do sistema</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>ACTIVEWORKFLOWS</id>
+          <label>Fluxos de trabalho ativos</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+        <subList>
+          <id>WORKFLOWHISTORY</id>
+          <label>Histórico de fluxo de trabalho</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>TAXES</id>
+      <label>Tax Details</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>NEXUS</id>
+              <label>Nexus</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>TAXREGOVERRIDE</id>
+              <label>Nexus Override</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+            <field>
+              <id>SUBSIDIARYTAXREGNUM</id>
+              <label>Subsidiary Tax Reg. Number</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>TAXDETAILSOVERRIDE</id>
+              <label>Tax Details Override</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+            <field>
+              <id>ENTITYTAXREGNUM</id>
+              <label>Vendor Tax Reg. Number</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>TAXPOINTDATE</id>
+              <label>Tax Point Date</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>TAXPOINTDATEOVERRIDE</id>
+              <label>Override</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>T</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>CUSTOM</id>
+      <label>Personalizado</label>
+      <visible>F</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_c_sat_cofins_wheld]</id>
+              <label>COFINS Withheld by Tax Substitution</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_c_sat_pis_wheld]</id>
+              <label>PIS Withheld by Tax Substitution</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dt_sat_date]</id>
+              <label>Date of the SAT Cash Receipt</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_origin_code]</id>
+              <label>Origin Code</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_sat_access_key]</id>
+              <label>Access Key of the SAT Cash Receipt</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_sat_number]</id>
+              <label>Number of the SAT Cash Receipt</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_sat_serial_number]</id>
+              <label>Serial Number of the SAT Equipment</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_ship_nature_indic]</id>
+              <label>Shipment Nature Indicator</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_d_clearance_date]</id>
+              <label>Clearance Date</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_d_import_reg_date]</id>
+              <label>Import Registration Date</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dt_rps_date]</id>
+              <label>RPS Date</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_import_decl_type]</id>
+              <label>Import Declaration Type</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_import_type]</id>
+              <label>Import Type</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_int_tran_method]</id>
+              <label>International Transportation Method</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_mode_import]</id>
+              <label>Mode of Import</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_place_clearance]</id>
+              <label>Place of Clearance</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_acqu_fed_tx_reg]</id>
+              <label>Acquirer or Orderer Federal Tax Registration</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_acquirer_state]</id>
+              <label>State of the Acquirer or Orderer</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_add_seq_num]</id>
+              <label>Addition Sequential Number</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_addition_num]</id>
+              <label>Addition Number</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_exporter_code]</id>
+              <label>Exporter Code</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_fci_control_num]</id>
+              <label>FCI Control Number</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_foreign_man_cd]</id>
+              <label>Foreign Manufacturer Code</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_import_decl_num]</id>
+              <label>Import Declaration Number</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_import_lic_num]</id>
+              <label>Import License Number</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_num_draw_conact]</id>
+              <label>Number of the Drawback Concession Act</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_rps_num]</id>
+              <label>RPS Number</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_rps_series]</id>
+              <label>RPS Series</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_f_post_incoming_edoc]</id>
+              <label>Post Incoming E-Document</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_edoc_model]</id>
+              <label>E-Document Model Number</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dc_gnre_pdf]</id>
+              <label>GNRE PDF File</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dc_gnre_xml]</id>
+              <label>GNRE File</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dt_canc_date]</id>
+              <label>Cancellation Date</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_carr_info_city]</id>
+              <label>City from Brazil</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_def_edoc_category]</id>
+              <label>E-Document Category</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_gnre_edoc_status]</id>
+              <label>GNRE Certification Status</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_ship_service_type]</id>
+              <label>Type of Shipping Service</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_shipping_vendor]</id>
+              <label>Shipping Vendor</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_lt_additional_info]</id>
+              <label>Additional Information</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_lt_gnre_return_msg]</id>
+              <label>GNRE Return Message</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_n_ship_info_gross_wt]</id>
+              <label>Gross Weight</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_n_ship_info_net_wt]</id>
+              <label>Net Weight</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_n_ship_info_qty]</id>
+              <label>Quantity</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_antt_code]</id>
+              <label>ANTT Code</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_carr_fed_tax_reg]</id>
+              <label>Federal Tax Registration</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_carr_info_address]</id>
+              <label>Address from Brazil</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_carr_info_name]</id>
+              <label>Name</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_carr_info_state]</id>
+              <label>State from Brazil</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_carr_state_tax_reg]</id>
+              <label>State Tax Registration</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_edoc_series]</id>
+              <label>Certified E-Document Series</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_license_plate]</id>
+              <label>License Plate</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_ref_einvoice]</id>
+              <label>Referenced Electronic Invoice</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_ship_info_brand]</id>
+              <label>Brand</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_ship_info_number]</id>
+              <label>Numbering</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_ship_info_species]</id>
+              <label>Species</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_state_lic_plate]</id>
+              <label>State of the License Plate</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_installment]</id>
+              <label>Installment</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_i_seq_number]</id>
+              <label>Sequence Number</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_entity]</id>
+              <label>Entity</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_access_key]</id>
+              <label>Access Key</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_cust_fed_tx_reg]</id>
+              <label>Customer Federal Tax Registration</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_vendor_fed_tx_reg]</id>
+              <label>Vendor Federal Tax Registration</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_ta_correction_txt]</id>
+              <label>Correction Text</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dc_cert_pdf_file]</id>
+              <label>Certified E-Document PDF File</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dc_cert_xml_file]</id>
+              <label>Certified E-Document File</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_dt_cert_date]</id>
+              <label>Certification Date</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_created_from]</id>
+              <label>Origin Transaction</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_edoc_status]</id>
+              <label>Certified E-Document Status</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_lt_cert_return_msg]</id>
+              <label>Return Message</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_cert_proto]</id>
+              <label>Certification Protocol</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_edoc_number]</id>
+              <label>Certified E-Document Number</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_subsd_fed_tx_reg]</id>
+              <label>Subsidiary Federal Tax Registration</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_addit_info_preset]</id>
+              <label>Additional Information Preset</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_transaction_nature]</id>
+              <label>Transaction Nature</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazilreports, scriptid=custbody_brr_tran_l_orig_invt_assess]</id>
+              <label>Origin Inventory Assessment</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_pd_created_by]</id>
+              <label>Criado por</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_data_de_incio]</id>
+              <label>Data de início</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_data_de_trmino]</id>
+              <label>Data de término</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_pd_obs_pedido_compra]</id>
+              <label>Observações do Dia</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_pd_met_pagamento]</id>
+              <label>Método de Pagamento - Pedido de compras</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_pd_data_vencimento]</id>
+              <label>Data de vencimento - Pedido de compras</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody2]</id>
+              <label>Data de Aprovação</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>GLIMPACTTAB</id>
+      <label>Impacto no livro-razão</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems>
+        <subList>
+          <id>GLIMPACTCHANGES</id>
+          <label>Alterações do impacto no livro-razão</label>
+          <visible>T</visible>
+          <neverEmpty>F</neverEmpty>
+        </subList>
+      </subItems>
+    </tab>
+    <tab>
+      <id>[scriptid=custtab_7_4346104_208]</id>
+      <label>E-Document</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>[scriptid=custbody_psg_ei_template]</id>
+              <label>E-Document Template</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_status]</id>
+              <label>E-Document Status</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>DISABLED</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_template_inlinehelp]</id>
+              <label>E-Document Template Inline Help</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_sending_method]</id>
+              <label>E-Document Sending Method</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_inbound_edocument]</id>
+              <label>Inbound E-Document (2)</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_pdf]</id>
+              <label>PDF File Reference</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_edoc_gen_trans_pdf]</id>
+              <label>Generate PDF</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+              <checkBoxDefault>USE_FIELD_DEFAULT</checkBoxDefault>
+            </field>
+            <field>
+              <id>[scriptid=custbody_edoc_generated_pdf]</id>
+              <label>Generated PDF</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_generated_edoc]</id>
+              <label>Generated E-Document</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_certified_edoc]</id>
+              <label>Certified E-Document</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_digitalsignature_label]</id>
+              <label>E-Document Digital Signature Label</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_edoc_recipient]</id>
+              <label>E-document Email Recipient</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_psg_ei_qr_code]</id>
+              <label>QR Code</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_ei_network_id]</id>
+              <label>Network Reference ID</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_ei_network_name]</id>
+              <label>Network Name</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_ei_network_status]</id>
+              <label>Network Status</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[scriptid=custbody_ei_network_updated_date_time]</id>
+              <label>Network Status Updated On</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>[appid=com.netsuite.brazillocalization, scriptid=custtab_cnab_payment]</id>
+      <label>CNAB Payment</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup>
+          <fields position="MIDDLE">
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_payment_method]</id>
+              <label>Method of CNAB Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_paymnt_file_status]</id>
+              <label>Status of the CNAB Payment File</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_pix_transf_method]</id>
+              <label>Pix Transfer Method</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_p_daily_interest]</id>
+              <label>% Daily Interest</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_p_fine]</id>
+              <label>% Fine</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_bar_code]</id>
+              <label>Bar Code for CNAB Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_t_qr_code]</id>
+              <label>QR Code for Pix Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_cent_clear_house]</id>
+              <label>Central Clearing House for CNAB Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_delivery_file]</id>
+              <label>CNAB Delivery File</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>INLINETEXT</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_doc_purpose]</id>
+              <label>Purpose of the DOC Transfer</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_ted_purpose]</id>
+              <label>Purpose of the TED Transfer</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_type_of_service]</id>
+              <label>Type of Service for CNAB</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_pix_key]</id>
+              <label>Pix Key</label>
+              <visible>F</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_subs_bank_info]</id>
+              <label>Subsidiary Banking Information for One-Time Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_type_of_payment]</id>
+              <label>Type of CNAB Payment</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+            <field>
+              <id>[appid=com.netsuite.brazillocalization, scriptid=custbody_brl_tran_l_vendor_paymt_pref]</id>
+              <label>Vendor Payment Preferences</label>
+              <visible>T</visible>
+              <mandatory>F</mandatory>
+              <displayType>NORMAL</displayType>
+              <columnBreak>F</columnBreak>
+              <sameRowAsPrevious>F</sameRowAsPrevious>
+            </field>
+          </fields>
+        </defaultFieldGroup>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+    <tab>
+      <id>[scriptid=custtab_1486_11128650_977]</id>
+      <label>PD | Motivos de Rejeição</label>
+      <visible>T</visible>
+      <fieldGroups>
+        <defaultFieldGroup/>
+      </fieldGroups>
+      <subItems/>
+    </tab>
+  </tabs>
+  <actionbar>
+    <buttons>
+      <button>
+        <id>AUTOFILL</id>
+        <label>Preenchimento automático</label>
+        <visible>T</visible>
+      </button>
+      <button>
+        <id>RECALC</id>
+        <label>Recalcular</label>
+        <visible>T</visible>
+      </button>
+    </buttons>
+    <menu>
+      <menuitem>
+        <id>MAKECOPY</id>
+        <label>Criar cópia</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>DELETE</id>
+        <label>Excluir</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>ACTIVITYHISTORY</id>
+        <label>Exibir atividade</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>GLIMPACT</id>
+        <label>Impacto no livro-razão</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>PRINTGLIMPACT</id>
+        <label>Imprimir impacto no livro-razão</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>GOTOREGISTER</id>
+        <label>Ir para registro</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>MEMORIZE</id>
+        <label>Memorizar</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>NEW</id>
+        <label>Novo</label>
+        <visible>T</visible>
+      </menuitem>
+      <menuitem>
+        <id>SUBMITNEW</id>
+        <label>Salvar e novo</label>
+        <visible>T</visible>
+      </menuitem>
+    </menu>
+  </actionbar>
+  <allowAddMultiple>T</allowAddMultiple>
+  <emailMessageTemplate>USE_DEFAULT</emailMessageTemplate>
+  <roles>
+    <role>
+      <id>FULL_ACCESS</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>ADMINISTRATOR</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole1531]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_azos_ff_std_ap_analyst]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_azos_ff_std_aranalyst]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_azos_br_ff_billing_analyst]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole1533]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_azos_ff_std_controller]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_azos_ff_std_executive]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_azos_ff_std_sales]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[appid=com.netsuite.cash360, scriptid=customrole_cash360_service_role]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>CEO_HANDS_OFF</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>BOOKKEEPER</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>TAX_ENGINE</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole_ns_ps_implementation_team]</id>
+      <preferred>F</preferred>
+    </role>
+    <role>
+      <id>[scriptid=customrole1001_3]</id>
+      <preferred>F</preferred>
+    </role>
+  </roles>
+</transactionForm>

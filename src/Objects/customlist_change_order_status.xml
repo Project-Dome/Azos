@@ -1,0 +1,40 @@
+<customlist scriptid="customlist_change_order_status">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Change Order Status</name>
+  <customvalues>
+    <customvalue scriptid="val_54667_t1247005_164">
+      <isinactive>F</isinactive>
+      <value>In Development</value>
+    </customvalue>
+    <customvalue scriptid="val_54668_t1247005_728">
+      <isinactive>F</isinactive>
+      <value>Reviewed</value>
+    </customvalue>
+    <customvalue scriptid="val_54669_t1247005_966">
+      <isinactive>F</isinactive>
+      <value>Approved</value>
+    </customvalue>
+    <customvalue scriptid="val_54670_t1247005_814">
+      <isinactive>F</isinactive>
+      <value>Rejected</value>
+    </customvalue>
+    <customvalue scriptid="val_54671_t1247005_654">
+      <isinactive>F</isinactive>
+      <value>Deferred</value>
+    </customvalue>
+    <customvalue scriptid="val_54672_t1247005_324">
+      <isinactive>F</isinactive>
+      <value>Executed</value>
+    </customvalue>
+    <customvalue scriptid="val_54673_t1247005_950">
+      <isinactive>F</isinactive>
+      <value>Completed</value>
+    </customvalue>
+    <customvalue scriptid="val_54674_t1247005_342">
+      <isinactive>F</isinactive>
+      <value>Not Required</value>
+    </customvalue>
+  </customvalues>
+</customlist>

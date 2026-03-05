@@ -1,0 +1,28 @@
+<customlist scriptid="customlist2196">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>PD - STATUS</name>
+  <customvalues>
+    <customvalue scriptid="val_180578_7326248_269">
+      <isinactive>F</isinactive>
+      <value>Pedido Aprovado – Aguardando Recebimento</value>
+    </customvalue>
+    <customvalue scriptid="val_180579_7326248_809">
+      <isinactive>F</isinactive>
+      <value>Aguardando Nota Fiscal</value>
+    </customvalue>
+    <customvalue scriptid="val_180580_7326248_300">
+      <isinactive>F</isinactive>
+      <value>Nota Fiscal Lançada Parcialmente</value>
+    </customvalue>
+    <customvalue scriptid="val_180581_7326248_416">
+      <isinactive>F</isinactive>
+      <value>Nota Fiscal Lançada</value>
+    </customvalue>
+    <customvalue scriptid="val_180583_7326248_442">
+      <isinactive>F</isinactive>
+      <value>Aprovação do supervisor pendente</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,72 @@
+<customlist scriptid="customlist73">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NS UAT Vertical</name>
+  <customvalues>
+    <customvalue scriptid="val_53712_t1195985_563">
+      <isinactive>F</isinactive>
+      <value>AMP - Media</value>
+    </customvalue>
+    <customvalue scriptid="val_53950_t1195985_927">
+      <isinactive>F</isinactive>
+      <value>AMP - Publishing</value>
+    </customvalue>
+    <customvalue scriptid="val_51696_t1195985_387">
+      <isinactive>F</isinactive>
+      <value>Financials First</value>
+    </customvalue>
+    <customvalue scriptid="val_53575_t1195985_857">
+      <isinactive>F</isinactive>
+      <value>Food and Beverage</value>
+    </customvalue>
+    <customvalue scriptid="val_51700_t1195985_274">
+      <isinactive>F</isinactive>
+      <value>MFG</value>
+    </customvalue>
+    <customvalue scriptid="val_51699_t1195985_572">
+      <isinactive>F</isinactive>
+      <value>NFP</value>
+    </customvalue>
+    <customvalue scriptid="val_55583_t1195985_773">
+      <isinactive>F</isinactive>
+      <value>OpenAir</value>
+    </customvalue>
+    <customvalue scriptid="val_55848_t1195985_538">
+      <isinactive>F</isinactive>
+      <value>Retail - ERP</value>
+    </customvalue>
+    <customvalue scriptid="val_54223_t1195985_935">
+      <isinactive>F</isinactive>
+      <value>Retail - Omnichannel</value>
+    </customvalue>
+    <customvalue scriptid="val_51695_t1195985_450">
+      <isinactive>F</isinactive>
+      <value>Services</value>
+    </customvalue>
+    <customvalue scriptid="val_53713_t1195985_384">
+      <isinactive>F</isinactive>
+      <value>Services - IT VAR</value>
+    </customvalue>
+    <customvalue scriptid="val_53714_t1195985_280">
+      <isinactive>F</isinactive>
+      <value>Services – Solution Provider</value>
+    </customvalue>
+    <customvalue scriptid="val_51697_t1195985_275">
+      <isinactive>F</isinactive>
+      <value>Software</value>
+    </customvalue>
+    <customvalue scriptid="val_51701_t1195985_855">
+      <isinactive>F</isinactive>
+      <value>SuitePeople</value>
+    </customvalue>
+    <customvalue scriptid="val_51694_t1195985_155">
+      <isinactive>F</isinactive>
+      <value>WD</value>
+    </customvalue>
+    <customvalue scriptid="val_61877_t1195985_106">
+      <isinactive>F</isinactive>
+      <value>NetSuite Connector</value>
+    </customvalue>
+  </customvalues>
+</customlist>

@@ -1,0 +1,25 @@
+<centercategory scriptid="custcentercategory_sas_wfm_ar_acc">
+  <center>ACCOUNTCENTER</center>
+  <centertab>ACCOUNTCENTERCENTERSETUP</centertab>
+  <label translate="T">[scriptid=custcollection_suiteapprovals.comp_lbl_custcentercategory_sas_wfm_ar]</label>
+  <links>
+    <link>
+      <linklabel translate="T">[scriptid=custcollection_suiteapprovals.comp_lbl_custcentercategory_links_app_rule_list]</linklabel>
+      <linkobject>[scriptid=customscript_sas_su_approvalrule_list.customdeploy_sas_su_approvalrule_list]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Preferências</linklabel>
+      <linkobject>[scriptid=customscript_sas_su_approval_preference.customdeploy_sas_su_approval_preference]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+    <link>
+      <linklabel>Log do e-mail de aprovação</linklabel>
+      <linkobject>[scriptid=customscript_sas_su_emailapplogs_list.customdeploy_sas_su_emailapplogs_list]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

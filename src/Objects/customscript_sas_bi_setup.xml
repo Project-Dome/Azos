@@ -1,0 +1,18 @@
+<bundleinstallationscript scriptid="customscript_sas_bi_setup">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>SAS Setup BI</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteBundles/Bundle 203059/com.netsuite.suiteapprovals/src/scripts/bi/WD_SAP_BI_Setup.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_sas_bi_setup">
+      <isdeployed>T</isdeployed>
+      <loglevel>ERROR</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>RELEASED</status>
+      <title>SAS Setup BI</title>
+    </scriptdeployment>
+  </scriptdeployments>
+</bundleinstallationscript>

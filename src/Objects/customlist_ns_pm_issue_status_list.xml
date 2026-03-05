@@ -1,0 +1,36 @@
+<customlist scriptid="customlist_ns_pm_issue_status_list">
+  <description></description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>NetSuite PM Issue Status List</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Identified</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>In Process</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Closed</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>With Support</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Enhancement</value>
+    </customvalue>
+    <customvalue scriptid="value_6_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>On Hold</value>
+    </customvalue>
+    <customvalue scriptid="value_7_t1195985_512">
+      <isinactive>F</isinactive>
+      <value>Future Phase</value>
+    </customvalue>
+  </customvalues>
+</customlist>

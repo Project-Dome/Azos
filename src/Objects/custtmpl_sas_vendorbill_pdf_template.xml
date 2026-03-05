@@ -1,0 +1,9 @@
+<advancedpdftemplate scriptid="custtmpl_sas_vendorbill_pdf_template" standard="STDTMPLEMPTY">
+  <description></description>
+  <displaysourcecode>F</displaysourcecode>
+  <isinactive>F</isinactive>
+  <preferred>F</preferred>
+  <printtype>TRANSACTION</printtype>
+  <title>SuiteApprovals Vendor Bill PDF/HTML Template</title>
+  <trantype>VENDPYMT</trantype>
+</advancedpdftemplate>
