@@ -1,0 +1,163 @@
+<template id="enter-values-po-template">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    ➕ Dados da Fatura
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <select id="item-card" class="form-select form-select-lg " hidden> </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group" style="display:flex; justify-content:center;">
+                                <select id="location" class="form-select form-select-lg "> </select>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-4">
+                            <div class="form-group">
+                                <input class="form-control autocomplete" placeholder="Carregando location" id="location"
+                                    data-restlet-script-id="customscript_pd_ai_location_rt"
+                                    data-restlet-deployment-id="customdeploy_pd_ai_location_rt"
+                                    data-placeholder="Digite a Localização" data-autocomplete-max-items="10" />
+                            </div>
+                        </div> -->
+
+                        <div class="col-sm-4">
+                            <div class="form-group" style="display:flex; justify-content:center;">
+                                <select id="class" class="form-select form-select-lg "> </select>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-4">
+                            <div class="form-group">
+                                <input class="form-control autocomplete" placeholder="Carregando Classe" id="class"
+                                    data-restlet-script-id="customscript_pd_ai_class_rt"
+                                    data-restlet-deployment-id="customdeploy_pd_ai_class_rt"
+                                    data-placeholder="Digite a Classe" data-autocomplete-max-items="10" />
+                            </div>
+                        </div> -->
+
+                        <div class="col-sm-4">
+                            <div class="form-group" style="display:flex; justify-content:center;">
+                                <select id="department" class="form-select form-select-lg "> </select>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-4">
+                            <div class="form-group">
+                                <input class="form-control autocomplete" placeholder="Carregando Departamento"
+                                    data-filter-elements-selector="#location" id="department"
+                                    data-restlet-script-id="customscript_pd_ai_department_rt"
+                                    data-restlet-deployment-id="customdeploy_pd_ai_department_rt"
+                                    data-placeholder="Digite o Departamento" data-autocomplete-max-items="10" />
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <input class="form-control autocomplete"
+                        placeholder="Carregando fornecedor" id="vendor-card"
+                        data-restlet-script-id="customscript_pd_pdi_vendor_rt"
+                        data-restlet-deployment-id="customdeploy_pd_pdi_vendor_rt"
+                        data-placeholder="Digite o fornecedor"
+                        data-autocomplete-max-items="10" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <input class="form-control autocomplete"
+                        placeholder="Condição de pagamento" id="payment-terms-card"
+                        data-restlet-script-id="customscript_pd_pdi_payment_terms_rt"
+                        data-restlet-deployment-id="customdeploy_pd_pdi_payment_terms_rt"
+                        data-placeholder="Digite a condição de pagamento"
+                        data-autocomplete-max-items="10" />
+                </div>
+            </div>
+        </div> -->
+    <!-- <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <h6>Inverter Qtde/Valor Unit</h6>
+                    <input type="checkbox" id="inverse-quantity-or-value-unit-card" />
+                </div>
+            </div>
+        </div>
+        <hr> -->
+    <!-- <div class="card shadow-sm">
+
+        <div class="card-header button" data-toggle="collapse" data-target="#filter-container-card" aria-expanded="true"
+            aria-controls="filter-container-card">
+            <i class="fa fa-filter text-secondary"></i>Filtros
+        </div>
+        <div class="card-body collapse show" id="filter-container-card">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input class="form-control autocomplete" placeholder="Digite o Número da Transação"
+                            id="purchase-order-filter" data-autocomplete-max-items="10" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <input class="hidden" id="page-number" />
+                    <input class="hidden" id="first-page" />
+                    <input class="hidden" id="last-page" />
+                    <hr style="margin-top: 0px;" />
+                    <button type="button" class="btn btn-sm btn-light" onclick="applyFilterCardBoard(this)"><i
+                            class="fa fa-filter text-success"></i>Aplicar Filtro</button>
+                    <button type="button" class="btn btn-sm btn-light" onclick="clearFilterCardBoard(this)"><i
+                            class="fa fa-eraser text-warning"></i>Limpar Filtro</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-sm-12">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    📋 Linha do Pedido de Compra
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table table-sm table-striped table-hover" id="purchase-order-line-list"
+                                style="margin-bottom: 0px; margin-top: 20px;" data-unique-id="id">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="100">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h6>
+                                                        <span class="empty-table-message">
+                                                            <i class="fa fa-exclamation text-info">
+                                                            </i>Aguardando parâmetros!
+                                                        </span>
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

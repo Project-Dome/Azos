@@ -1,0 +1,29 @@
+.checkbox-block {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.gradient-blue {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+.gradient-orange {
+    background: linear-gradient(to right, #f83600, #f9d423);
+}
+
+.card-header {
+    background: linear-gradient(to right, #4b6cb7, #182848);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
