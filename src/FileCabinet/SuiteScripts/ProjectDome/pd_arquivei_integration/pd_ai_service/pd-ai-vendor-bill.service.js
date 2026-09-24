@@ -64,6 +64,7 @@ define(
                 query: search_util
                     .where(search_util.query(FIELDS.createdFrom, 'anyof', poIds))
                     .and(search_util.query(FIELDS.mainLine, 'is', 'F'))
+                    .and(search_util.query(FIELDS.taxLine, 'is', 'F'))
                     .and(search_util.query(FIELDS.invoiceConciliation, 'anyof', '@NONE@'))
             });
         }

@@ -9,7 +9,6 @@ define(
         'N/runtime',
         'N/file',
         'N/encode',
-        'N/email',
 
         '../../pd_ai_service/pd-ai-subsidiary.service',
         '../../pd_ai_service/pd-ai-api-authorization.service',
@@ -19,8 +18,6 @@ define(
         '../../pd_ai_service/pd-ai-document-importation.service',
         '../../pd_ai_service/pd-ai-vendor.service',
         '../../pd_ai_service/pd-ai-nfse-status.service',
-        '../../pd_ai_service/pd-ai-configuration.service',
-        '../../pd_ai_service/pd-ai-vendor-alert-recipient.service',
 
 
         // '../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-record.util',
@@ -33,7 +30,6 @@ define(
         runtime,
         file,
         encode,
-        email,
 
         subsidiary_service,
         api_authorization_service,
@@ -43,14 +39,9 @@ define(
         url_configuration_service,
         vendor_service,
         nfse_status_service,
-        configuration_service,
-        vendor_alert_recipient_service,
 
         xml_util
     ) {
-        // Remetente temporário (internal ID do Employee) — definição final ainda pendente de
-        // alinhamento com o usuário (ver docs/specs/alerta-fornecedor-nao-cadastrado.md, seção 9).
-        const VENDOR_ALERT_EMAIL_AUTHOR_ID = 14;
 
         function getInputData() {
             const _subsidiaryForEmissionDocument = subsidiary_service.getSubsidiary();
@@ -208,14 +199,6 @@ define(
                         vendor_service.getByCNPJ(formatCNPJ(objectXML['vendorCnpj'])), {}
                     )?.id, null
                 );
-
-                if (!objectXML['vendorId']) {
-                    sendUnregisteredVendorAlert({
-                        number: objectXML['number'],
-                        vendorCnpj: objectXML['vendorCnpj'],
-                        corporateName: objectXML['corporateName']
-                    });
-                }
             }
 
             objectXML['takerCnpj'] = json.CompNfse.Nfse[0].InfNfse[0].DeclaracaoPrestacaoServico[0].InfDeclaracaoPrestacaoServico[0].Tomador[0].IdentificacaoTomador[0].CpfCnpj[0].Cnpj || null;
@@ -274,42 +257,6 @@ define(
             cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2');
 
             return String(cnpj);
-        };
-
-        function sendUnregisteredVendorAlert(options) {
-            try {
-                const _configuration = configuration_service.get();
-                if (!_configuration?.vendorAlert) return;
-
-                const _recipients = vendor_alert_recipient_service.getAllEmails();
-                if (isNullOrEmpty(_recipients)) return;
-
-                email.send({
-                    author: VENDOR_ALERT_EMAIL_AUTHOR_ID,
-                    recipients: _recipients,
-                    subject: buildVendorAlertSubject(options),
-                    body: buildVendorAlertBody(options)
-                });
-            } catch (error) {
-                log.error({ title: 'sendUnregisteredVendorAlert', details: error });
-            }
-        };
-
-        function buildVendorAlertSubject(options) {
-            return 'NFS-e ' + options.number + ' — Fornecedor não cadastrado no NetSuite';
-        };
-
-        function buildVendorAlertBody(options) {
-            return [
-                'Foi identificada uma NFS-e cujo fornecedor não está cadastrado no NetSuite.',
-                '',
-                'Dados para cadastro:',
-                '- Fornecedor: ' + options.corporateName,
-                '- CNPJ: ' + options.vendorCnpj,
-                '- NFS-e: ' + options.number,
-                '',
-                'Ação necessária: realizar o cadastro do fornecedor no NetSuite.'
-            ].join('\n');
         };
 
         function convertDate(dateIsoString) {

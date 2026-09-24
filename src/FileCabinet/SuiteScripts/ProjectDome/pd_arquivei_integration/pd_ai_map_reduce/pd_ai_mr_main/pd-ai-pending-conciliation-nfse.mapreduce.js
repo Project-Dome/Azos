@@ -5,7 +5,7 @@
  */
 define(
     [
-        '../pd_ai_mr_service/pd-ai-pending-conciliation-nfse.mapreduce.service'
+        // '../pd_ai_mr_service/pd-ai-pending-conciliation-nfse.mapreduce.service'
     ],
     function (
         map_reduce_service

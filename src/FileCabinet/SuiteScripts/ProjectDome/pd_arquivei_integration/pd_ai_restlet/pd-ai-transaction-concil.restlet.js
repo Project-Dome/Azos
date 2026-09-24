@@ -44,6 +44,7 @@ define(
             }
 
             const _query = buildQuery(parameters);
+            log.audit({ title: "_query", details: _query });
 
             const _pagedData = sql_query.runSuiteQLPaged({
                 query: _query,
