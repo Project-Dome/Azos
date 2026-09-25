@@ -18,6 +18,7 @@ define(
         '../../pd_ai_service/pd-ai-document-importation.service',
         '../../pd_ai_service/pd-ai-vendor.service',
         '../../pd_ai_service/pd-ai-nfse-status.service',
+        '../../pd_ai_service/pd-ai-vendor-alert-queue.service',
 
 
         // '../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-record.util',
@@ -39,6 +40,7 @@ define(
         url_configuration_service,
         vendor_service,
         nfse_status_service,
+        vendor_alert_queue_service,
 
         xml_util
     ) {
@@ -199,6 +201,10 @@ define(
                         vendor_service.getByCNPJ(formatCNPJ(objectXML['vendorCnpj'])), {}
                     )?.id, null
                 );
+
+                if (!objectXML['vendorId']) {
+                    queueVendorAlert(objectXML);
+                }
             }
 
             objectXML['takerCnpj'] = json.CompNfse.Nfse[0].InfNfse[0].DeclaracaoPrestacaoServico[0].InfDeclaracaoPrestacaoServico[0].Tomador[0].IdentificacaoTomador[0].CpfCnpj[0].Cnpj || null;
@@ -246,6 +252,25 @@ define(
             }
 
             return objectXML;
+        };
+
+        // Só registra na fila; se/quando enviar o e-mail é decisão do Scheduled Script de alerta.
+        // Falha aqui não pode interromper a importação da NFS-e
+        function queueVendorAlert(nFSeData) {
+            try {
+                const _queueRecord = vendor_alert_queue_service.create();
+                vendor_alert_queue_service.set({
+                    record: _queueRecord,
+                    data: {
+                        number: nFSeData['number'],
+                        cnpj: nFSeData['vendorCnpj'],
+                        vendorName: nFSeData['corporateName']
+                    }
+                });
+                vendor_alert_queue_service.save(_queueRecord);
+            } catch (error) {
+                log.error('Error Queue Vendor Alert', error);
+            }
         };
 
         function formatCNPJ(cnpj) {

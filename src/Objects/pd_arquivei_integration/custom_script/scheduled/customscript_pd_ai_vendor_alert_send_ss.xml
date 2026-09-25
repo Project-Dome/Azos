@@ -1,0 +1,24 @@
+<scheduledscript scriptid="customscript_pd_ai_vendor_alert_send_ss">
+  <description>Consolida as ocorrências de fornecedor não cadastrado (customrecord_pd_ai_vendor_alert_queue) e envia um único e-mail conforme a frequência definida em PD | AI | Configuração.</description>
+  <isinactive>F</isinactive>
+  <name>PD | AI | Vendor Alert Send SS</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/ProjectDome/pd_arquivei_integration/pd_ai_scheduled/pd-ai-vendor-alert-send.scheduled.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pd_ai_vendor_alert_send_ss">
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <status>SCHEDULED</status>
+      <title>PD | AI | Vendor Alert Send SS</title>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <startdate>2026-09-25</startdate>
+          <starttime>11:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</scheduledscript>

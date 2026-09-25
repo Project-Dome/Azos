@@ -1,0 +1,30 @@
+<mapreducescript scriptid="customscript_pd_ai_nfse_conciliation_mr">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PD | AI | NFS-e Conciliation MR</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/ProjectDome/pd_arquivei_integration/pd_ai_map_reduce/pd_ai_mr_main/pd-ai-pending-conciliation-nfse.mapreduce.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pd_ai_nfse_conciliation_mr">
+      <buffersize>1</buffersize>
+      <concurrencylimit>1</concurrencylimit>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <queueallstagesatonce>T</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>SCHEDULED</status>
+      <title>PD | AI | NFS-e Conciliation MR</title>
+      <yieldaftermins>60</yieldaftermins>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat>PT15M</repeat>
+          <startdate>2025-11-24</startdate>
+          <starttime>06:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>

@@ -1,0 +1,30 @@
+<mapreducescript scriptid="customscript_pd_ai_cancel_nfse">
+  <description></description>
+  <isinactive>F</isinactive>
+  <name>PD | AI | Cancel NFS-e</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/ProjectDome/pd_arquivei_integration/pd_ai_map_reduce/pd_ai_mr_main/pd-ai-nfse-cancelled.mapreduce.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pd_ai_cancel_nfse">
+      <buffersize>1</buffersize>
+      <concurrencylimit>1</concurrencylimit>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <queueallstagesatonce>T</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>SCHEDULED</status>
+      <title>PD | AI | Cancel NFS-e</title>
+      <yieldaftermins>60</yieldaftermins>
+      <recurrence>
+        <daily>
+          <everyxdays>1</everyxdays>
+          <repeat>PT2H</repeat>
+          <startdate>2026-04-08</startdate>
+          <starttime>09:00:00Z</starttime>
+        </daily>
+      </recurrence>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>
