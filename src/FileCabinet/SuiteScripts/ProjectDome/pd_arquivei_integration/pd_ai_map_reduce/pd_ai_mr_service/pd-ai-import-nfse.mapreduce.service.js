@@ -144,7 +144,7 @@ define(
                             file: _xmlFile.fileId,
                             json: _jsonXmlFile,
                             pdf: _fileId,
-                            nfseId: nFSeList.data[0]?.id,
+                            nfseId: dataLine.id,
                             statusId: _mapByCode.received.id,
                             ...nFSeData
                         }

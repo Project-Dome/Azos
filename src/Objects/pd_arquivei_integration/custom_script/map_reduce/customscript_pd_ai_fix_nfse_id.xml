@@ -1,0 +1,22 @@
+<mapreducescript scriptid="customscript_pd_ai_fix_nfse_id">
+  <description>Correção única: preenche custrecord_pd_ai_nfse_id com o ID do Arquivei extraído do nome do XML/PDF vinculado.</description>
+  <isinactive>F</isinactive>
+  <name>PD | AI | Fix NFS-e ID MR</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/ProjectDome/pd_arquivei_integration/pd_ai_map_reduce/pd_ai_mr_main/pd-ai-fix-nfse-id.mapreduce.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pd_ai_fix_nfse_id">
+      <buffersize>1</buffersize>
+      <concurrencylimit>1</concurrencylimit>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <queueallstagesatonce>T</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>NOTSCHEDULED</status>
+      <title>PD | AI | Fix NFS-e ID MR</title>
+      <yieldaftermins>60</yieldaftermins>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>

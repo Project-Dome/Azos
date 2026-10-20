@@ -75,11 +75,12 @@ define(
                 formula: "CASE WHEN {rate} >= " + nfseValue + " THEN 'T' WHEN {rate} < " + nfseValue + " THEN 'F' END"
             }
 
+            // Linhas com valor abaixo da NFS-e ficariam desabilitadas na tela, então nem retornam
             return search_util.all({
                 type: TYPE,
                 columns: FIELDS,
                 query: buildQuery(vendorId, subsidiaryData)
-            });
+            }).filter(lineData => lineData.isValidVendorBill == 'T');
 
             function buildQuery(vendorId, subsidiaryData) {
                 const _query = search_util
