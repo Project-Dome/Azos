@@ -118,6 +118,8 @@ define(
 
                     data['electronicDocument'] = script_parameters.getNFSeId(), data['operationNature'] = operationNature.taxationMunicipality
 
+                    if (isPaidVendorBill(_conciliationData, _conciliationData.invoice.id)) return;
+
                     const vendorBillRecord = vendor_bil_service.load({ id: _conciliationData.invoice.id });
                     vendor_bil_service.set({
                         record: vendorBillRecord,
@@ -167,6 +169,12 @@ define(
                     }
 
                     data['electronicDocument'] = script_parameters.getNFSeId(), data['operationNature'] = operationNature.taxationMunicipality
+
+                    if (!vendorBillForConciliation.length) {
+                        throw 'Nenhuma fatura de compra pendente de conciliação encontrada para a linha do pedido de compra.';
+                    }
+
+                    if (isPaidVendorBill(_conciliationData, vendorBillForConciliation[0].id)) return;
 
                     const vendorBillRecord = vendor_bil_service.load({ id: vendorBillForConciliation[0].id });
                     vendor_bil_service.set({
@@ -279,6 +287,29 @@ define(
                     details: getExceptionMessage(exception)
                 });
             }
+        }
+
+        // DEV-866: não altera faturas de compra que já tenham pagamento (total ou parcial).
+        // Marca o registro de processamento com erro pra ficar visível e não reprocessar.
+        function isPaidVendorBill(_conciliationData, vendorBillId) {
+            const _payment = vendor_bil_service.getPaymentStatus(vendorBillId);
+
+            if (!_payment.isPaidInFull && !_payment.isPartiallyPaid) return false;
+
+            const _message = _payment.isPaidInFull
+                ? `Fatura de compra ${vendorBillId} já está paga. A conciliação não altera faturas pagas.`
+                : `Fatura de compra ${vendorBillId} possui pagamento parcial. A conciliação não altera faturas com pagamento.`;
+
+            log.audit({ title: 'DEV-866 - fatura com pagamento, ignorada', details: { vendorBillId, payment: _payment } });
+
+            processing_nfse_service.setSubmit({
+                recordId: _conciliationData.id,
+                status: processing_nfse_service.status.error,
+                errorMessage: _message,
+                reprocessing: 'F'
+            });
+
+            return true;
         }
 
         function manageIssueDate(date) {

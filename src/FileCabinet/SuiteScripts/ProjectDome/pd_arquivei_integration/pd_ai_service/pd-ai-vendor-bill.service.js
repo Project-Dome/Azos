@@ -6,6 +6,7 @@
 define(
     [
         'N/record',
+        'N/search',
 
         '../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-record.util',
         '../../pd_c_netsuite_tools/pd_cnt_standard/pd-cnts-search.util',
@@ -13,6 +14,7 @@ define(
     ],
     function (
         record,
+        search,
 
         record_util,
         search_util
@@ -139,15 +141,21 @@ define(
         function set(options) {
             let _vendorBillSet = { sublists: {} };
 
-            _vendorBillSet[FIELDS.vendor.name] = options.data?.vendor;
-            _vendorBillSet[FIELDS.location.name] = options.data?.location;
-            _vendorBillSet[FIELDS.class.name] = options.data?.class;
-            _vendorBillSet[FIELDS.department.name] = options.data?.department;
-            _vendorBillSet[FIELDS.electronicDocument.name] = options.data?.electronicDocument;
-            _vendorBillSet[FIELDS.operationNature.name] = options.data?.operationNature;
-            _vendorBillSet[FIELDS.rpsSerie.name] = options.data?.rpsSerie;
-            _vendorBillSet[FIELDS.rpsNumber.name] = options.data?.rpsNumber;
-            _vendorBillSet[FIELDS.rpsDate.name] = options.data?.rpsDate;
+            // DEV-866: só envia o campo quando vier preenchido, pra não apagar
+            // valores que já existem na fatura (ex.: classe/departamento).
+            const BODY_FIELDS = [
+                'vendor', 'location', 'class', 'department',
+                'electronicDocument', 'operationNature',
+                'rpsSerie', 'rpsNumber', 'rpsDate'
+            ];
+
+            BODY_FIELDS.forEach(function (key) {
+                const value = options.data?.[key];
+
+                if (hasValue(value)) {
+                    _vendorBillSet[FIELDS[key].name] = value;
+                }
+            });
 
             if (options.data.itemList) {
                 _vendorBillSet.sublists[ITEM_SUBLIST_ID] = manageItemSubListData(options.data.itemList);
@@ -160,6 +168,34 @@ define(
                 .set(_vendorBillSet);
 
             return record
+        }
+
+        // Não usa isNullOrEmpty de propósito: 0 (ex.: rpsSerie) é valor válido.
+        function hasValue(value) {
+            if (value === null || value === undefined) return false;
+            if (typeof value === 'string' && value.trim() === '') return false;
+            if (Array.isArray(value) && value.length === 0) return false;
+            return true;
+        }
+
+        function getPaymentStatus(vendorBillId) {
+            const _lookup = search.lookupFields({
+                type: TYPE,
+                id: vendorBillId,
+                columns: ['statusref', 'amountremaining', 'total']
+            });
+
+            const _status = _lookup?.statusref?.[0]?.value || _lookup?.statusref || '';
+            const _total = Math.abs(parseFloat(_lookup?.total) || 0);
+            const _remaining = Math.abs(parseFloat(_lookup?.amountremaining) || 0);
+
+            return {
+                status: _status,
+                isPaidInFull: _status === 'paidInFull',
+                isPartiallyPaid: _status !== 'paidInFull' && _total > 0 && _remaining < _total,
+                total: _total,
+                amountRemaining: _remaining
+            };
         }
 
         function manageItemSubListData(itemList) {
@@ -205,6 +241,7 @@ define(
         return {
             getVendorBillIsNotCreateByPO: getVendorBillIsNotCreateByPO,
             getLineVendorBillByPO: getLineVendorBillByPO,
+            getPaymentStatus: getPaymentStatus,
             transformData: transformData,
             readData: readData,
             mapLines: mapLines,
