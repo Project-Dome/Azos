@@ -107,6 +107,8 @@ define(
                             next: null
                         });
 
+                    if (isNullOrEmpty(nFSeList.data)) return;
+
                     const _xmlFile = getXml({
                         docImport: 'nfse_',
                         xml: nFSeList.data[0].xml
@@ -129,15 +131,10 @@ define(
                     log.audit('nfseRecordData', nfseRecordData);
 
                     if (nfseRecordData) {
-                        const nFSeRecord = nfse_service.load({ id: nfseRecordData.id });
-
-                        nfse_service.set({
-                            record: nFSeRecord,
-                            data: {
-                                statusId: _mapByCode.cancelled.id
-                            }
+                        nfse_service.setStatus({
+                            recordId: nfseRecordData.id,
+                            statusId: _mapByCode.cancelled.id
                         });
-                        const _nfseId = nfse_service.save(nFSeRecord);
                     }
                 });
 

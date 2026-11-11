@@ -1,0 +1,20 @@
+<customlist scriptid="customlist_pd_ai_vendor_alert_freq">
+  <description>Frequência de envio do e-mail consolidado de fornecedores não cadastrados (Arquivei).</description>
+  <isinactive>F</isinactive>
+  <isordered>T</isordered>
+  <name>Frequência Alerta Fornecedor</name>
+  <customvalues>
+    <customvalue scriptid="val_pd_ai_vaf_daily">
+      <isinactive>F</isinactive>
+      <value>Diária</value>
+    </customvalue>
+    <customvalue scriptid="val_pd_ai_vaf_weekly">
+      <isinactive>F</isinactive>
+      <value>Semanal</value>
+    </customvalue>
+    <customvalue scriptid="val_pd_ai_vaf_monthly">
+      <isinactive>F</isinactive>
+      <value>Mensal</value>
+    </customvalue>
+  </customvalues>
+</customlist>

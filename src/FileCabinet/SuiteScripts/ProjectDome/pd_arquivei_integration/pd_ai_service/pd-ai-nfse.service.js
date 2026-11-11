@@ -227,19 +227,101 @@ define(
             });
         }
 
-        function getForCancelled({ id, vendorCnpj, takerCnpj, number, issueDate }) {
-            return search_util.first({
+        // Busca pelo ID do Arquivei; se não achar exatamente uma nota, tenta pela chave natural
+        // (prestador + tomador + número). Resultado ambíguo (mais de uma) ou vazio retorna null.
+        function getForCancelled({ id, vendorCnpj, takerCnpj, number }) {
+            if (id) {
+                const _byId = getSingle(
+                    search_util.where(search_util.query(FIELDS.nfseId, 'is', id))
+                );
+
+                log.audit({ title: '_byId', details: _byId });
+
+                if (_byId) return _byId;
+            }
+
+            if (!vendorCnpj || !takerCnpj || !number) return null;
+
+            return getSingle(
+                search_util
+                    .where(search_util.query(FIELDS.vendorCnpj, 'is', vendorCnpj))
+                    .and(search_util.query(FIELDS.takerCnpj, 'is', takerCnpj))
+                    .and(search_util.query(FIELDS.number, 'is', number))
+            );
+
+            function getSingle(query) {
+                const _data = search_util.all({
+                    type: TYPE,
+                    columns: FIELDS,
+                    query: query
+                });
+
+                return (_data.length === 1 || _data.length === 2) ? _data[0] : null;
+            }
+        }
+
+        function setStatus({ recordId, statusId }) {
+            let _mapValues = {};
+            _mapValues[FIELDS.status.name] = statusId;
+
+            return record.submitFields({
                 type: TYPE,
-                columns: FIELDS,
-                query: search_util
-                    .where(search_util.query(FIELDS.nfseId, 'is', id))
-                    .or(
-                        search_util.
-                            where(search_util.query(FIELDS.vendorCnpj, 'is', vendorCnpj))
-                            .and(search_util.query(FIELDS.takerCnpj, 'is', takerCnpj))
-                            .and(search_util.query(FIELDS.number, 'is', number))
-                        // .and(search_util.query(FIELDS.issueDate, 'on', issueDate))
-                    )
+                id: recordId,
+                values: _mapValues
+            });
+        }
+
+        function getByStatusQuery(statusId) {
+            return {
+                type: 'suiteql',
+                query: `
+                    SELECT nfse.id AS id
+                    FROM ${TYPE} AS nfse
+                    WHERE nfse.${FIELDS.status.name} = ?`,
+                params: [statusId]
+            };
+        }
+
+        // O import gravava custrecord_pd_ai_nfse_id com o ID da primeira nota do lote; o ID correto
+        // está no nome dos arquivos vinculados (XML: nfse_<id>.xml / PDF: <id>.pdf).
+        function getWithInvalidNfseIdQuery() {
+            return {
+                type: 'suiteql',
+                query: `
+                    SELECT
+                        nfse.id AS id,
+                        nfse.${FIELDS.nfseId.name} AS currentnfseid,
+                        fx.name AS xmlname,
+                        fp.name AS pdfname
+                    FROM
+                        ${TYPE} AS nfse
+                        LEFT JOIN file AS fx ON fx.id = nfse.${FIELDS.file.name}
+                        LEFT JOIN file AS fp ON fp.id = nfse.${FIELDS.pdf.name}
+                    WHERE
+                        nfse.${FIELDS.nfseId.name} IS NULL
+                        OR fx.name IS NULL
+                        OR fx.name <> 'nfse_' || nfse.${FIELDS.nfseId.name} || '.xml'`
+            };
+        }
+
+        function getNfseIdFromFileNames({ xmlName, pdfName }) {
+            const _fromXml = /^nfse_(.+)\.xml$/.exec(xmlName || '');
+            if (_fromXml) return _fromXml[1];
+
+            const _fromPdf = /^(.+)\.pdf$/.exec(pdfName || '');
+            if (_fromPdf) return _fromPdf[1];
+
+            return null;
+        }
+
+        function setNfseId({ recordId, nfseId }) {
+            let _mapValues = {};
+            _mapValues[FIELDS.nfseId.name] = nfseId;
+
+            return record.submitFields({
+                type: TYPE,
+                id: recordId,
+                values: _mapValues
             });
         }
 
@@ -253,6 +335,11 @@ define(
         return {
             // createNFSe: createNFSe,
             getForCancelled: getForCancelled,
+            setStatus: setStatus,
+            getByStatusQuery: getByStatusQuery,
+            getWithInvalidNfseIdQuery: getWithInvalidNfseIdQuery,
+            getNfseIdFromFileNames: getNfseIdFromFileNames,
+            setNfseId: setNfseId,
             getById: getById,
             setSubmit: setSubmit,
             create: create,

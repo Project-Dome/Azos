@@ -1,0 +1,22 @@
+<mapreducescript scriptid="customscript_pd_ai_reset_cancel_nfse">
+  <description>Correção única: devolve para Recebida todas as NFS-e com status Cancelada, para reprocessar os cancelamentos com o ID correto.</description>
+  <isinactive>F</isinactive>
+  <name>PD | AI | Reset Cancelled NFS-e MR</name>
+  <notifyadmins>F</notifyadmins>
+  <notifyemails></notifyemails>
+  <notifyowner>T</notifyowner>
+  <scriptfile>[/SuiteScripts/ProjectDome/pd_arquivei_integration/pd_ai_map_reduce/pd_ai_mr_main/pd-ai-reset-cancelled-nfse.mapreduce.js]</scriptfile>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_pd_ai_reset_cancel_nfse">
+      <buffersize>1</buffersize>
+      <concurrencylimit>1</concurrencylimit>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <queueallstagesatonce>T</queueallstagesatonce>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <status>NOTSCHEDULED</status>
+      <title>PD | AI | Reset Cancelled NFS-e MR</title>
+      <yieldaftermins>60</yieldaftermins>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>
