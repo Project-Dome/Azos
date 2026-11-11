@@ -18,6 +18,8 @@ define(
         search_util
     ) {
         const TYPE = 'vendorbill';
+        // Vendor bill status (statusRef) that blocks the NFS-e reconciliation from editing the bill
+        const PAID_STATUS_REF = 'paidInFull';
         let FIELDS = {
             vendor: { name: 'entity', type: 'list' },
             date: { name: 'trandate', type: 'date' },
@@ -75,11 +77,12 @@ define(
                 formula: "CASE WHEN {rate} >= " + nfseValue + " THEN 'T' WHEN {rate} < " + nfseValue + " THEN 'F' END"
             }
 
+            // Linhas com valor abaixo da NFS-e ficariam desabilitadas na tela, então nem retornam
             return search_util.all({
                 type: TYPE,
                 columns: FIELDS,
                 query: buildQuery(vendorId, subsidiaryData)
-            });
+            }).filter(lineData => lineData.isValidVendorBill == 'T');
 
             function buildQuery(vendorId, subsidiaryData) {
                 const _query = search_util
@@ -139,10 +142,12 @@ define(
         function set(options) {
             let _vendorBillSet = { sublists: {} };
 
-            _vendorBillSet[FIELDS.vendor.name] = options.data?.vendor;
-            _vendorBillSet[FIELDS.location.name] = options.data?.location;
-            _vendorBillSet[FIELDS.class.name] = options.data?.class;
-            _vendorBillSet[FIELDS.department.name] = options.data?.department;
+            // Header classification fields are only set when filled: an empty value ('' / null) would
+            // clear what is already on the bill. undefined is skipped by record_util.set.
+            _vendorBillSet[FIELDS.vendor.name] = _valueOrSkip(options.data?.vendor);
+            _vendorBillSet[FIELDS.location.name] = _valueOrSkip(options.data?.location);
+            _vendorBillSet[FIELDS.class.name] = _valueOrSkip(options.data?.class);
+            _vendorBillSet[FIELDS.department.name] = _valueOrSkip(options.data?.department);
             _vendorBillSet[FIELDS.electronicDocument.name] = options.data?.electronicDocument;
             _vendorBillSet[FIELDS.operationNature.name] = options.data?.operationNature;
             _vendorBillSet[FIELDS.rpsSerie.name] = options.data?.rpsSerie;
@@ -160,6 +165,20 @@ define(
                 .set(_vendorBillSet);
 
             return record
+        }
+
+        // Returns undefined for empty values so the field is not touched by record_util.set
+        function _valueOrSkip(value) {
+            if (value === undefined || value === null || value === '') {
+                return undefined;
+            }
+
+            return value;
+        }
+
+        // True when the bill is fully paid (status "Pago integralmente")
+        function isPaid(vendorBillRecord) {
+            return vendorBillRecord.getValue({ fieldId: 'statusRef' }) === PAID_STATUS_REF;
         }
 
         function manageItemSubListData(itemList) {
@@ -211,7 +230,8 @@ define(
             create: create,
             load: load,
             save: save,
-            set: set
+            set: set,
+            isPaid: isPaid
         };
     }
 );

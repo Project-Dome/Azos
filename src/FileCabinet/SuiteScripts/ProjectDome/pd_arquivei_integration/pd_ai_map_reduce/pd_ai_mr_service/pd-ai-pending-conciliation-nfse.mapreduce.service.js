@@ -1,6 +1,6 @@
 /**
  * @NApiVersion 2.1
- * @NModuleScope SameAccount 
+ * @NModuleScope SameAccount
  * @author Project Dome - Mário Augusto Braga Costa
  */
 define(
@@ -57,15 +57,14 @@ define(
                         });
                     }
 
-                    const data = {
-                        class: _conciliationData.class,
-                        department: _conciliationData.department,
-                        rpsNumber: _nfseData?.rpsNumber || _nfseData?.number,
-                        rpsSerie: _nfseData?.rpsSerie || 0,
-                        rpsDate: manageIssueDate(_nfseData.issueDateIso)
+                    // Class/department: keep what comes from the PO; only fill when the bill header is empty
+                    const data = _fiscalData(_nfseData);
+                    if (!_vendorBill.getValue({ fieldId: 'class' })) {
+                        data['class'] = _conciliationData.class;
                     }
-
-                    data['electronicDocument'] = script_parameters.getNFSeId(), data['operationNature'] = operationNature.taxationMunicipality
+                    if (!_vendorBill.getValue({ fieldId: 'department' })) {
+                        data['department'] = _conciliationData.department;
+                    }
 
                     vendor_bil_service.set({
                         record: _vendorBill,
@@ -108,17 +107,16 @@ define(
                 try {
                     const _nfseData = nfse_service.getById(_conciliationData.nfse.id);
 
-                    const data = {
-                        class: _conciliationData.class,
-                        department: _conciliationData.department,
-                        rpsNumber: _nfseData?.rpsNumber || _nfseData?.number,
-                        rpsSerie: _nfseData?.rpsSerie || 0,
-                        rpsDate: manageIssueDate(_nfseData.issueDateIso)
-                    }
-
-                    data['electronicDocument'] = script_parameters.getNFSeId(), data['operationNature'] = operationNature.taxationMunicipality
+                    // Existing bill: only the NFS-e fiscal data is written (no class/department/location)
+                    const data = _fiscalData(_nfseData);
 
                     const vendorBillRecord = vendor_bil_service.load({ id: _conciliationData.invoice.id });
+
+                    if (vendor_bil_service.isPaid(vendorBillRecord)) {
+                        _setPaidBillError(_conciliationData, _conciliationData.invoice.id);
+                        return;
+                    }
+
                     vendor_bil_service.set({
                         record: vendorBillRecord,
                         data: data
@@ -158,17 +156,20 @@ define(
                             && element.rate == _conciliationData.totalValue
                     );
 
-                    const data = {
-                        class: _conciliationData.class,
-                        department: _conciliationData.department,
-                        rpsNumber: _nfseData?.rpsNumber || _nfseData?.number,
-                        rpsSerie: _nfseData?.rpsSerie || 0,
-                        rpsDate: manageIssueDate(_nfseData.issueDateIso)
+                    if (!vendorBillForConciliation.length) {
+                        throw 'Nenhuma fatura do pedido ' + _conciliationData?.purchaseOrder?.id + ' encontrada para a linha/valor da NFS-e.';
                     }
 
-                    data['electronicDocument'] = script_parameters.getNFSeId(), data['operationNature'] = operationNature.taxationMunicipality
+                    // Existing bill: only the NFS-e fiscal data is written (no class/department/location)
+                    const data = _fiscalData(_nfseData);
 
                     const vendorBillRecord = vendor_bil_service.load({ id: vendorBillForConciliation[0].id });
+
+                    if (vendor_bil_service.isPaid(vendorBillRecord)) {
+                        _setPaidBillError(_conciliationData, vendorBillForConciliation[0].id);
+                        return;
+                    }
+
                     vendor_bil_service.set({
                         record: vendorBillRecord,
                         data: data
@@ -279,6 +280,34 @@ define(
                     details: getExceptionMessage(exception)
                 });
             }
+        }
+
+        // NFS-e fiscal data only (RPS, e-document category, operation nature)
+        function _fiscalData(_nfseData) {
+            const data = {
+                rpsNumber: _nfseData?.rpsNumber || _nfseData?.number,
+                rpsSerie: _nfseData?.rpsSerie || 0,
+                rpsDate: manageIssueDate(_nfseData.issueDateIso)
+            }
+
+            data['electronicDocument'] = script_parameters.getNFSeId(), data['operationNature'] = operationNature.taxationMunicipality
+
+            return data;
+        }
+
+        // Paid bill: bill is not touched; processing record goes to error with an explicit message
+        function _setPaidBillError(_conciliationData, vendorBillId) {
+            log.audit({
+                title: 'Fatura paga - conciliação não aplicada',
+                details: { conciliacao: _conciliationData.id, fatura: vendorBillId }
+            });
+
+            processing_nfse_service.setSubmit({
+                recordId: _conciliationData.id,
+                status: processing_nfse_service.status.error,
+                errorMessage: 'Fatura ' + vendorBillId + ' já está paga. Os dados fiscais da NFS-e não foram gravados.',
+                reprocessing: 'F'
+            });
         }
 
         function manageIssueDate(date) {
