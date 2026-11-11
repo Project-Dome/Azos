@@ -9,8 +9,9 @@ define([], function() {
     const STATUS_MAP = {
         "PENDENTE": 1,
         "ENVIADO": 2,
-        "CANCELADO": 3,
-        "ERRO": 5
+        "ERRO": 3,
+        "REJECT": 4,
+        "PAID": 5
     };
 
     function getCode(label) {

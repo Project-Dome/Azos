@@ -10,9 +10,7 @@ define(
         'N/ui/dialog',
 
        '../pd_inp_service/pd-inp-notification-control.service',
-       '../pd_inp_service/pd-inp-status-map.service',
-
-        '../../pd_c_netsuite_tools/pd_cnt_common/pd-cntc-common.util.js'
+       '../pd_inp_service/pd-inp-status-map.service'
     ],
     function (
         current_record,
